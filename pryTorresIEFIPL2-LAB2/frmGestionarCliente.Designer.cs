@@ -167,6 +167,7 @@
             // 
             // lstActividadClienteConsulta
             // 
+            this.lstActividadClienteConsulta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.lstActividadClienteConsulta.Enabled = false;
             this.lstActividadClienteConsulta.FormattingEnabled = true;
             this.lstActividadClienteConsulta.Location = new System.Drawing.Point(120, 183);
@@ -176,6 +177,7 @@
             // 
             // lstBarrioConsultaCliente
             // 
+            this.lstBarrioConsultaCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.lstBarrioConsultaCliente.Enabled = false;
             this.lstBarrioConsultaCliente.FormattingEnabled = true;
             this.lstBarrioConsultaCliente.Location = new System.Drawing.Point(120, 123);
@@ -321,7 +323,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(778, 506);
+            this.ClientSize = new System.Drawing.Size(291, 421);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnEliminar);

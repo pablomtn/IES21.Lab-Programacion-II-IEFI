@@ -51,11 +51,11 @@ namespace pryTorresIEFIPL2_LAB2
                 txtDni.Text = Convert.ToString(objClaseCliente.varDniDelCliente);
                 clsBarrios objClaseBarrio = new clsBarrios();
                 Int32 varCodigoBarrio = objClaseCliente.varBarrioDelCliente;           
-                lstBarrioConsultaCliente.SelectedText = objClaseBarrio.Buscar(varCodigoBarrio);
+                lstBarrioConsultaCliente.Text = objClaseBarrio.Buscar(varCodigoBarrio);
                 txtDireccionConsultaCliente.Text = objClaseCliente.varDireccionDelCliente;
                 clsActividad objClaseActividad = new clsActividad();
                 Int32 varCodigoActividad = objClaseCliente.varActividadDelCliente; 
-                lstActividadClienteConsulta.SelectedText = objClaseActividad.Buscar(varCodigoActividad);
+                lstActividadClienteConsulta.Text = objClaseActividad.Buscar(varCodigoActividad);
                 txtSaldoClienteConsulta.Text = Convert.ToString(objClaseCliente.varSaldoDelCliente);
 
               
@@ -103,11 +103,9 @@ namespace pryTorresIEFIPL2_LAB2
             txtNombreClienteConsulta.Text = "";
             txtDni.Text = "";
             txtSaldoClienteConsulta.Text = "";
-            lstActividadClienteConsulta.SelectedIndex = -1;
-            lstBarrioConsultaCliente.SelectedIndex= -1;
+            lstActividadClienteConsulta.Text = "";
+            lstBarrioConsultaCliente.Text = "";
             txtDireccionConsultaCliente.Text = "";
-
-
         }
 
         private void lstBarrioConsultaCliente_SelectedIndexChanged(object sender, EventArgs e)
