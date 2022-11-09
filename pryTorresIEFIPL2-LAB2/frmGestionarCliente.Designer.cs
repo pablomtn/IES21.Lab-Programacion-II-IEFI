@@ -37,6 +37,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.mrcDatosClientes = new System.Windows.Forms.GroupBox();
+            this.lstActividadClienteConsulta = new System.Windows.Forms.ComboBox();
+            this.lstBarrioConsultaCliente = new System.Windows.Forms.ComboBox();
             this.txtDireccionConsultaCliente = new System.Windows.Forms.TextBox();
             this.lblDireccionClienteConsulta = new System.Windows.Forms.Label();
             this.lblDni = new System.Windows.Forms.Label();
@@ -50,8 +52,6 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.lstBarrioConsultaCliente = new System.Windows.Forms.ComboBox();
-            this.lstActividadClienteConsulta = new System.Windows.Forms.ComboBox();
             this.mrcBusquedaCliente.SuspendLayout();
             this.mrcDatosClientes.SuspendLayout();
             this.SuspendLayout();
@@ -165,6 +165,25 @@
             this.mrcDatosClientes.TabStop = false;
             this.mrcDatosClientes.Text = "Datos del Cliente";
             // 
+            // lstActividadClienteConsulta
+            // 
+            this.lstActividadClienteConsulta.Enabled = false;
+            this.lstActividadClienteConsulta.FormattingEnabled = true;
+            this.lstActividadClienteConsulta.Location = new System.Drawing.Point(120, 183);
+            this.lstActividadClienteConsulta.Name = "lstActividadClienteConsulta";
+            this.lstActividadClienteConsulta.Size = new System.Drawing.Size(116, 23);
+            this.lstActividadClienteConsulta.TabIndex = 18;
+            // 
+            // lstBarrioConsultaCliente
+            // 
+            this.lstBarrioConsultaCliente.Enabled = false;
+            this.lstBarrioConsultaCliente.FormattingEnabled = true;
+            this.lstBarrioConsultaCliente.Location = new System.Drawing.Point(120, 123);
+            this.lstBarrioConsultaCliente.Name = "lstBarrioConsultaCliente";
+            this.lstBarrioConsultaCliente.Size = new System.Drawing.Size(116, 23);
+            this.lstBarrioConsultaCliente.TabIndex = 10;
+            this.lstBarrioConsultaCliente.SelectedIndexChanged += new System.EventHandler(this.lstBarrioConsultaCliente_SelectedIndexChanged);
+            // 
             // txtDireccionConsultaCliente
             // 
             this.txtDireccionConsultaCliente.Location = new System.Drawing.Point(120, 153);
@@ -272,6 +291,7 @@
             this.btnEliminar.TabIndex = 7;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnModificar
             // 
@@ -296,24 +316,6 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // lstBarrioConsultaCliente
-            // 
-            this.lstBarrioConsultaCliente.Enabled = false;
-            this.lstBarrioConsultaCliente.FormattingEnabled = true;
-            this.lstBarrioConsultaCliente.Location = new System.Drawing.Point(120, 123);
-            this.lstBarrioConsultaCliente.Name = "lstBarrioConsultaCliente";
-            this.lstBarrioConsultaCliente.Size = new System.Drawing.Size(116, 23);
-            this.lstBarrioConsultaCliente.TabIndex = 10;
-            // 
-            // lstActividadClienteConsulta
-            // 
-            this.lstActividadClienteConsulta.Enabled = false;
-            this.lstActividadClienteConsulta.FormattingEnabled = true;
-            this.lstActividadClienteConsulta.Location = new System.Drawing.Point(120, 183);
-            this.lstActividadClienteConsulta.Name = "lstActividadClienteConsulta";
-            this.lstActividadClienteConsulta.Size = new System.Drawing.Size(116, 23);
-            this.lstActividadClienteConsulta.TabIndex = 18;
             // 
             // frmGestionarCliente
             // 

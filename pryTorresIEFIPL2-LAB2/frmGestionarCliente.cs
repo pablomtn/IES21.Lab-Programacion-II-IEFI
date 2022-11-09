@@ -89,5 +89,30 @@ namespace pryTorresIEFIPL2_LAB2
             txtSaldoClienteConsulta.ReadOnly = false;
             txtDireccionConsultaCliente.ReadOnly = false;
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            Int32 varDNI = Convert.ToInt32(mskDniClienteBusqueda.Text);
+            clsCliente objClaseCliente = new clsCliente();
+            objClaseCliente.Eliminar(varDNI);
+            LimpiarControles();
+        }
+        private void LimpiarControles()
+        {
+            txtApellidoClienteConsulta.Text = "";
+            txtNombreClienteConsulta.Text = "";
+            txtDni.Text = "";
+            txtSaldoClienteConsulta.Text = "";
+            lstActividadClienteConsulta.SelectedIndex = -1;
+            lstBarrioConsultaCliente.SelectedIndex= -1;
+            txtDireccionConsultaCliente.Text = "";
+
+
+        }
+
+        private void lstBarrioConsultaCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

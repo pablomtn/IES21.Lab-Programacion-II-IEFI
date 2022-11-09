@@ -275,6 +275,37 @@ namespace pryTorresIEFIPL2_LAB2
             MessageBox.Show("Cambios Guardados");
         }
 
+        public void Eliminar(Int32 Dni)
+        {
+            try
+            {
+                //Instruccion sql
+                string Sql = "DELETE FROM CLIENTES WHERE (" + Dni + " = [DNI])";
 
+                //Recibe la ruta de la BD para conectarse
+                conexionBd.ConnectionString = varRutaAccesoBD;
+                //Se conecta a la BD
+                conexionBd.Open();
+                //El comando toma la conexion
+                comandoBd.Connection = conexionBd;
+                //Se indica el tipo de comando el text es para instrucciones sql
+                comandoBd.CommandType = CommandType.Text;
+                //Se pasa la instruccion sql al comando
+                comandoBd.CommandText = Sql;
+                //ejecuta el comando
+                comandoBd.ExecuteNonQuery();
+
+                conexionBd.Close();
+                MessageBox.Show("Cliente Eliminado");
+            }
+            catch (Exception mensaje)
+            {
+                MessageBox.Show(Convert.ToString(mensaje));
+            }
+
+
+
+
+        }
     }
 }
