@@ -39,12 +39,12 @@
             this.lblBarrioCliente = new System.Windows.Forms.Label();
             this.lstBarrioCliente = new System.Windows.Forms.ComboBox();
             this.mrcCargaClientes = new System.Windows.Forms.GroupBox();
+            this.txtDireccionCliente = new System.Windows.Forms.TextBox();
+            this.lblDireccionCliente = new System.Windows.Forms.Label();
             this.lblSaldoCliente = new System.Windows.Forms.Label();
             this.txtSaldoCliente = new System.Windows.Forms.TextBox();
             this.mskDniCliente = new System.Windows.Forms.MaskedTextBox();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.txtDireccionCliente = new System.Windows.Forms.TextBox();
-            this.lblDireccionCliente = new System.Windows.Forms.Label();
             this.mrcCargaClientes.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -187,6 +187,27 @@
             this.mrcCargaClientes.TabStop = false;
             this.mrcCargaClientes.Text = "Datos Cliente";
             // 
+            // txtDireccionCliente
+            // 
+            this.txtDireccionCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccionCliente.Location = new System.Drawing.Point(117, 141);
+            this.txtDireccionCliente.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.txtDireccionCliente.MaxLength = 20;
+            this.txtDireccionCliente.Name = "txtDireccionCliente";
+            this.txtDireccionCliente.Size = new System.Drawing.Size(116, 21);
+            this.txtDireccionCliente.TabIndex = 16;
+            // 
+            // lblDireccionCliente
+            // 
+            this.lblDireccionCliente.AutoSize = true;
+            this.lblDireccionCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDireccionCliente.Location = new System.Drawing.Point(7, 141);
+            this.lblDireccionCliente.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblDireccionCliente.Name = "lblDireccionCliente";
+            this.lblDireccionCliente.Size = new System.Drawing.Size(67, 16);
+            this.lblDireccionCliente.TabIndex = 17;
+            this.lblDireccionCliente.Text = "Dirección:";
+            // 
             // lblSaldoCliente
             // 
             this.lblSaldoCliente.AutoSize = true;
@@ -227,32 +248,11 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             // 
-            // txtDireccionCliente
-            // 
-            this.txtDireccionCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccionCliente.Location = new System.Drawing.Point(117, 141);
-            this.txtDireccionCliente.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.txtDireccionCliente.MaxLength = 20;
-            this.txtDireccionCliente.Name = "txtDireccionCliente";
-            this.txtDireccionCliente.Size = new System.Drawing.Size(116, 21);
-            this.txtDireccionCliente.TabIndex = 16;
-            // 
-            // lblDireccionCliente
-            // 
-            this.lblDireccionCliente.AutoSize = true;
-            this.lblDireccionCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDireccionCliente.Location = new System.Drawing.Point(7, 141);
-            this.lblDireccionCliente.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblDireccionCliente.Name = "lblDireccionCliente";
-            this.lblDireccionCliente.Size = new System.Drawing.Size(67, 16);
-            this.lblDireccionCliente.TabIndex = 17;
-            this.lblDireccionCliente.Text = "Dirección:";
-            // 
             // frmCargaClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(263, 402);
+            this.ClientSize = new System.Drawing.Size(263, 345);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.mrcCargaClientes);
             this.Controls.Add(this.btnCargarCliente);
