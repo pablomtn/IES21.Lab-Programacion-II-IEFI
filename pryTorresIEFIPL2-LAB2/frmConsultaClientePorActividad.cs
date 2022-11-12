@@ -44,5 +44,24 @@ namespace pryTorresIEFIPL2_LAB2
             objClaseCliente.Reportar(CodigoActividad);
             MessageBox.Show("Reporte generado exitosamente");
         }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            //Ventana que nos permite elegir las impresoras
+            prtVentana.ShowDialog();
+            //Al objeto documento le asignamos la impresora que se eligio en la ventana de impresoras
+            prtDocumento.PrinterSettings = prtVentana.PrinterSettings;
+            //Indicamos que el documento se debe imprimir
+            //Ejecuta el evento del Documento PrintPage
+            prtDocumento.Print();
+            
+        }
+        
+        private void prtDocumento_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            clsCliente objClaseCliente = new clsCliente();
+            objClaseCliente.Imprimir(e);
+
+        }
     }
 }

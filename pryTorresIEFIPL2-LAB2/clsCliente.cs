@@ -8,6 +8,9 @@ using System.Data;
 using System.Data.OleDb;
 using System.Threading;
 using System.IO;
+//Para enviar a imprimir y elegir la fuente de la letra
+using System.Drawing;
+using System.Drawing.Printing;
 
 namespace pryTorresIEFIPL2_LAB2
 {
@@ -444,6 +447,58 @@ namespace pryTorresIEFIPL2_LAB2
                 MessageBox.Show(mensaje.Message);
 
             }
+
+        }
+        //Vamos a estar rwcibiendo un objeto de PrintPage
+        public void Imprimir(PrintPageEventArgs reporte)
+        {
+
+            try
+            {
+                //Creacion del objeto para la fuente de la letra
+                Font TipoLetra = new Font("Arial", 12);
+                Int32 varEspacioEntreLinea = 200;
+                //Recibe la ruta de la BD para conectarse
+                conexionBd.ConnectionString = varRutaAccesoBD;
+                //Abre la conexion de la BD, es un canal
+                conexionBd.Open();
+                //Necesitamos mndar una orden para que nos traiga datos de la BD 
+                //usamos el objeto comando
+                //Indicamos la conexion que tiene que utilizar
+                comandoBd.Connection = conexionBd;
+                //Indicamos el tipo de comando
+                //Trae una tabla el comando
+                comandoBd.CommandType = CommandType.TableDirect;
+                comandoBd.CommandText = varTabla;
+                //El adaptador recibe los datos de la BD(lectura)
+                AdaptadorDeDatosBd = new OleDbDataAdapter(comandoBd);
+                //objeto que contiene lo que tiene la tabla, es una tabla virtual
+                DataSet LectorDataSet = new DataSet();
+                //Adaptamos los datos al data set
+                AdaptadorDeDatosBd.Fill(LectorDataSet, varTabla);
+                //Pregunta si hay filas en el DataSet
+                if (LectorDataSet.Tables[varTabla].Rows.Count > 0)
+                {
+                    foreach (DataRow fila in LectorDataSet.Tables[varTabla].Rows)
+                    {
+                        reporte.Graphics.DrawString(fila["DNI"].ToString(), TipoLetra, Brushes.Black, 100, varEspacioEntreLinea);
+                        reporte.Graphics.DrawString(fila["Nombre"].ToString(), TipoLetra, Brushes.Black, 200, varEspacioEntreLinea);
+                        reporte.Graphics.DrawString(fila["Apellido"].ToString(), TipoLetra, Brushes.Black, 300, varEspacioEntreLinea);
+                        reporte.Graphics.DrawString(fila["Actividad"].ToString(), TipoLetra, Brushes.Black, 400, varEspacioEntreLinea);
+                        varEspacioEntreLinea = varEspacioEntreLinea + 15;
+
+
+                    }
+
+                }
+                conexionBd.Close();
+            }
+            catch (Exception mensaje)
+            {
+
+                MessageBox.Show(mensaje.Message);
+            }
+
 
         }
 

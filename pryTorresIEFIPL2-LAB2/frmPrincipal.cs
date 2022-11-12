@@ -95,5 +95,11 @@ namespace pryTorresIEFIPL2_LAB2
             frmConsultaClientePorActividad objVentanaConsultaClientePorActividad = new frmConsultaClientePorActividad();
             objVentanaConsultaClientePorActividad.ShowDialog();
         }
+
+        private void listadoPorBarrioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultaClientePorBarrio objVentanaConsultaClientePorBarrio = new frmConsultaClientePorBarrio();
+            objVentanaConsultaClientePorBarrio.ShowDialog();
+        }
     }
 }

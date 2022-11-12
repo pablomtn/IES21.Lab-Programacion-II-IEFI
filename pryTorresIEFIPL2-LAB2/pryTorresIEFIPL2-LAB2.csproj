@@ -61,6 +61,12 @@
     <Compile Include="frmConsultaClientePorActividad.Designer.cs">
       <DependentUpon>frmConsultaClientePorActividad.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConsultaClientePorBarrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaClientePorBarrio.Designer.cs">
+      <DependentUpon>frmConsultaClientePorBarrio.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmConsultaClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmConsultaClientePorActividad.resx">
       <DependentUpon>frmConsultaClientePorActividad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaClientePorBarrio.resx">
+      <DependentUpon>frmConsultaClientePorBarrio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmConsultaClientes.resx">
       <DependentUpon>frmConsultaClientes.cs</DependentUpon>
@@ -117,6 +126,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Consultas\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

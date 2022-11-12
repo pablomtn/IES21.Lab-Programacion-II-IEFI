@@ -37,8 +37,8 @@
             this.gestionarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.consultarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.listadoPorBarrioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoPorActividadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listadoPorBarrioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusPrincipal = new System.Windows.Forms.StatusStrip();
             this.striplblEstado = new System.Windows.Forms.ToolStripStatusLabel();
@@ -114,18 +114,19 @@
             this.consultarToolStripMenuItem1.Text = "Listado Total Clientes";
             this.consultarToolStripMenuItem1.Click += new System.EventHandler(this.consultarToolStripMenuItem1_Click);
             // 
-            // listadoPorBarrioToolStripMenuItem
-            // 
-            this.listadoPorBarrioToolStripMenuItem.Name = "listadoPorBarrioToolStripMenuItem";
-            this.listadoPorBarrioToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
-            this.listadoPorBarrioToolStripMenuItem.Text = "Listado por Barrio";
-            // 
             // listadoPorActividadToolStripMenuItem
             // 
             this.listadoPorActividadToolStripMenuItem.Name = "listadoPorActividadToolStripMenuItem";
             this.listadoPorActividadToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.listadoPorActividadToolStripMenuItem.Text = "Listado por Actividad";
             this.listadoPorActividadToolStripMenuItem.Click += new System.EventHandler(this.listadoPorActividadToolStripMenuItem_Click);
+            // 
+            // listadoPorBarrioToolStripMenuItem
+            // 
+            this.listadoPorBarrioToolStripMenuItem.Name = "listadoPorBarrioToolStripMenuItem";
+            this.listadoPorBarrioToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.listadoPorBarrioToolStripMenuItem.Text = "Listado por Barrio";
+            this.listadoPorBarrioToolStripMenuItem.Click += new System.EventHandler(this.listadoPorBarrioToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 

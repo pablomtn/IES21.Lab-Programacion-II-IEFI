@@ -37,6 +37,8 @@
             this.btnListar = new System.Windows.Forms.Button();
             this.btnReportar = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
+            this.prtVentana = new System.Windows.Forms.PrintDialog();
+            this.prtDocumento = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,6 +124,15 @@
             this.btnImprimir.TabIndex = 5;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
+            // prtVentana
+            // 
+            this.prtVentana.UseEXDialog = true;
+            // 
+            // prtDocumento
+            // 
+            this.prtDocumento.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.prtDocumento_PrintPage);
             // 
             // frmConsultaClientePorActividad
             // 
@@ -154,5 +165,7 @@
         private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.Button btnReportar;
         private System.Windows.Forms.Button btnImprimir;
+        private System.Windows.Forms.PrintDialog prtVentana;
+        private System.Drawing.Printing.PrintDocument prtDocumento;
     }
 }
