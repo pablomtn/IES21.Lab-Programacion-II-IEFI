@@ -29,6 +29,8 @@ namespace pryTorresIEFIPL2_LAB2
             txtCantidadClientes.Text = (objClsClienteMostrarGrilla.varCantidadDeClientes).ToString();
             txtPromedioSaldos.Text = (objClsClienteMostrarGrilla.varPromedioSaldosDeClientes).ToString("0.00");
             txtTotalSaldos.Text = (objClsClienteMostrarGrilla.varTotalSaldosDeClientes).ToString("0.00");
+            txtSaldoMayor.Text = (objClsClienteMostrarGrilla.varMontoMayor).ToString();
+            txtSaldoMenor.Text = (objClsClienteMostrarGrilla.varMontoMenor).ToString();
         }
 
         private void frmConsultaClientes_Load(object sender, EventArgs e)

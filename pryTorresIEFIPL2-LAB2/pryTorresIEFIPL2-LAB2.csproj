@@ -67,12 +67,6 @@
     <Compile Include="frmConsultaClientes.Designer.cs">
       <DependentUpon>frmConsultaClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmConsultaClientesDos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmConsultaClientesDos.Designer.cs">
-      <DependentUpon>frmConsultaClientesDos.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmGestionarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,11 +84,11 @@
     <EmbeddedResource Include="frmCargaClientes.resx">
       <DependentUpon>frmCargaClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaClientePorActividad.resx">
+      <DependentUpon>frmConsultaClientePorActividad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmConsultaClientes.resx">
       <DependentUpon>frmConsultaClientes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmConsultaClientesDos.resx">
-      <DependentUpon>frmConsultaClientesDos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGestionarCliente.resx">
       <DependentUpon>frmGestionarCliente.cs</DependentUpon>

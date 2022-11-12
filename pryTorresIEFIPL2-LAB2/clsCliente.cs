@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using System.Data;
 using System.Data.OleDb;
 using System.Threading;
+using System.IO;
 
 namespace pryTorresIEFIPL2_LAB2
 {
@@ -34,7 +35,8 @@ namespace pryTorresIEFIPL2_LAB2
         private Int32 varActividadCliente;
         private Decimal varSaldoCliente;
 
-
+        public Decimal varMontoMayor = 0;
+        public Decimal varMontoMenor = 0;
 
         //Declaracion de propiedades
         //Get retorna el valor
@@ -177,19 +179,41 @@ namespace pryTorresIEFIPL2_LAB2
                 //Es una tabla virtual que esta en la ram
                 OleDbDataReader DR = comandoBd.ExecuteReader();
                 dgvGrilla.Rows.Clear();
+                string varDetalleBarrio = "";
+                string varDetalleActividad = "";
                 varCantidadClientes = 0;
                 varTotalSaldos = 0;
                 varPromedioSaldos = 0;
+                clsBarrios objClaseBarrio = new clsBarrios();
+                clsActividad objClaseActividad = new clsActividad();
                 //Si hay filas en el DataReader entra el if
                 if (DR.HasRows)
                 {
                     //Mientras hayan datos para leer en el Datareader
+                    DR.Read();
+                    varMontoMenor = DR.GetDecimal(6);
                     while (DR.Read())
+
                     {
+           
+                        varDetalleBarrio = objClaseBarrio.Buscar(DR.GetInt32(3));
+                        varDetalleActividad = objClaseActividad.Buscar(DR.GetInt32(5));
+                        
                         //Añade filas a la grilla tomando las posiciones de los campos de la tabla clientes
-                        dgvGrilla.Rows.Add(DR.GetInt32(2), DR.GetString(0), DR.GetString(1), DR.GetDecimal(6));
+                        dgvGrilla.Rows.Add(DR.GetInt32(2), DR.GetString(0), DR.GetString(1), varDetalleBarrio, DR.GetString(4), varDetalleActividad, DR.GetDecimal(6));
                         varCantidadClientes++;
                         varTotalSaldos = varTotalSaldos + DR.GetDecimal(6);
+                        if (DR.GetDecimal(6) > varMontoMayor)
+                        {
+                            varMontoMayor = DR.GetDecimal(6);
+                        }
+
+                        if (varMontoMenor > DR.GetDecimal(6)) 
+                        {
+                            varMontoMenor = DR.GetDecimal(6);
+                        }
+
+
                     }
                     varPromedioSaldos = varTotalSaldos / varCantidadClientes;
                 }
@@ -307,5 +331,128 @@ namespace pryTorresIEFIPL2_LAB2
 
 
         }
+
+        public void ListarActividad(Int32 Actividad, DataGridView dgvActividad)
+        {
+
+            try
+            {
+                //Recibe la ruta de la BD para conectarse
+                conexionBd.ConnectionString = varRutaAccesoBD;
+                //Abre la conexion de la BD, es un canal
+                conexionBd.Open();
+                //Necesitamos mndar una orden para que nos traiga datos de la BD 
+                //usamos el objeto comando
+                //Indicamos la conexion que tiene que utilizar
+                comandoBd.Connection = conexionBd;
+                //Indicamos el tipo de comando
+                //Trae una tabla el comando
+                comandoBd.CommandType = CommandType.TableDirect;
+                comandoBd.CommandText = varTabla;
+                //Creacion del objeto datareader que toma lo del comando una vez ejecutado el comando
+                //Es una tabla virtual que esta en la ram
+                OleDbDataReader DR = comandoBd.ExecuteReader();
+                dgvActividad.Rows.Clear();
+                string varDetalleBarrio = "";
+                clsBarrios objClaseBarrio = new clsBarrios();
+                clsActividad objClaseActividad = new clsActividad();
+                //Si hay filas en el DataReader entra el if
+                if (DR.HasRows)
+                {
+                    //Mientras hayan datos para leer en el Datareader
+                    DR.Read();
+                    varMontoMenor = DR.GetDecimal(6);
+                    while (DR.Read())
+                    {
+
+                        if (DR.GetInt32(5) == Actividad)
+                        {
+                            //Añade filas a la grilla tomando las posiciones de los campos de la tabla clientes
+                            dgvActividad.Rows.Add(DR.GetInt32(2), DR.GetString(0), DR.GetString(1));
+                        }
+                    }
+                    
+                }
+                conexionBd.Close();
+
+
+            }
+            catch (Exception mensaje)
+            {
+                MessageBox.Show(mensaje.Message);
+
+            }
+
+
+        }
+        public void Reportar(Int32 Actividad)
+        {
+
+            try
+            {
+                //Recibe la ruta de la BD para conectarse
+                conexionBd.ConnectionString = varRutaAccesoBD;
+                //Abre la conexion de la BD, es un canal
+                conexionBd.Open();
+                //Necesitamos mndar una orden para que nos traiga datos de la BD 
+                //usamos el objeto comando
+                //Indicamos la conexion que tiene que utilizar
+                comandoBd.Connection = conexionBd;
+                //Indicamos el tipo de comando
+                //Trae una tabla el comando
+                comandoBd.CommandType = CommandType.TableDirect;
+                comandoBd.CommandText = varTabla;
+                //Creacion del objeto datareader que toma lo del comando una vez ejecutado el comando
+                //Es una tabla virtual que esta en la ram
+                OleDbDataReader DR = comandoBd.ExecuteReader();
+                //Inicializo el objeto StreamWriter para crear el archivo, false para que lo cree muchas veces
+                StreamWriter reporteClientes = new StreamWriter("ReporteClientes.csv", false);
+                reporteClientes.WriteLine("Listado de Clientes\n");
+                reporteClientes.WriteLine("DNI;Nombre;Apellido;Actividad");
+                Int32 varCantidadClientes = 0;
+                clsActividad objClaseActividad = new clsActividad();
+                string varActividad = "";
+                //Si hay filas en el DataReader entra el if
+                if (DR.HasRows)
+                {
+ 
+                    while (DR.Read())
+                    {
+                        if (Actividad == DR.GetInt32(5))
+                        {
+                            varActividad = objClaseActividad.Buscar(DR.GetInt32(5));
+                            reporteClientes.Write(DR.GetInt32(2));
+                            reporteClientes.Write(";");
+                            reporteClientes.Write(DR.GetString(0));
+                            reporteClientes.Write(";");
+                            reporteClientes.Write(DR.GetString(1));
+                            reporteClientes.Write(";");
+                            reporteClientes.WriteLine(varActividad);
+                            varCantidadClientes++;
+                        }
+                        
+                    }
+
+                    reporteClientes.Write("\nCantidad de clientes:");
+                    reporteClientes.WriteLine(varCantidadClientes);
+                }
+                conexionBd.Close();
+                reporteClientes.Close();
+            }
+            catch (Exception mensaje)
+            {
+                MessageBox.Show(mensaje.Message);
+
+            }
+
+        }
+
+
+
+
+
+
+
+
     }
 }

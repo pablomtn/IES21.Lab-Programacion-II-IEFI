@@ -89,5 +89,11 @@ namespace pryTorresIEFIPL2_LAB2
         {
             this.Close();
         }
+
+        private void listadoPorActividadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultaClientePorActividad objVentanaConsultaClientePorActividad = new frmConsultaClientePorActividad();
+            objVentanaConsultaClientePorActividad.ShowDialog();
+        }
     }
 }

@@ -20,7 +20,6 @@ C:\Users\PABLO\Source\Repos\Lab2-PL2-IEFI\pryTorresIEFIPL2-LAB2\obj\Debug\pryTor
 C:\Users\PABLO\Source\Repos\Lab2-PL2-IEFI\pryTorresIEFIPL2-LAB2\obj\Debug\pryTorresIEFIPL2-LAB2.csproj.SuggestedBindingRedirects.cache
 C:\Users\PABLO\Source\Repos\Lab2-PL2-IEFI\pryTorresIEFIPL2-LAB2\obj\Debug\pryTorresIEFIPL2_LAB2.frmCargaClientes.resources
 C:\Users\PABLO\Source\Repos\Lab2-PL2-IEFI\pryTorresIEFIPL2-LAB2\obj\Debug\pryTorresIEFIPL2_LAB2.frmConsultaClientes.resources
-C:\Users\PABLO\Source\Repos\Lab2-PL2-IEFI\pryTorresIEFIPL2-LAB2\obj\Debug\pryTorresIEFIPL2_LAB2.frmConsultaClientesDos.resources
 C:\Users\PABLO\Source\Repos\Lab2-PL2-IEFI\pryTorresIEFIPL2-LAB2\obj\Debug\pryTorresIEFIPL2_LAB2.frmGestionarCliente.resources
 C:\Users\PABLO\Source\Repos\Lab2-PL2-IEFI\pryTorresIEFIPL2-LAB2\obj\Debug\pryTorresIEFIPL2_LAB2.frmPrincipal.resources
 C:\Users\PABLO\Source\Repos\Lab2-PL2-IEFI\pryTorresIEFIPL2-LAB2\obj\Debug\pryTorresIEFIPL2_LAB2.Properties.Resources.resources
@@ -43,3 +42,4 @@ C:\Users\Alumnos\Source\Repos\Lab2-PL2-IEFI\pryTorresIEFIPL2-LAB2\obj\Debug\pryT
 C:\Users\Alumnos\Source\Repos\Lab2-PL2-IEFI\pryTorresIEFIPL2-LAB2\obj\Debug\pryTorresIEFIPL2-LAB2.csproj.CoreCompileInputs.cache
 C:\Users\Alumnos\Source\Repos\Lab2-PL2-IEFI\pryTorresIEFIPL2-LAB2\obj\Debug\pryTorresIEFIPL2-LAB2.exe
 C:\Users\Alumnos\Source\Repos\Lab2-PL2-IEFI\pryTorresIEFIPL2-LAB2\obj\Debug\pryTorresIEFIPL2-LAB2.pdb
+C:\Users\PABLO\Source\Repos\Lab2-PL2-IEFI\pryTorresIEFIPL2-LAB2\obj\Debug\pryTorresIEFIPL2_LAB2.frmConsultaClientePorActividad.resources

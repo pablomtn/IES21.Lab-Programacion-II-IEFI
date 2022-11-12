@@ -34,7 +34,7 @@
             this.lblDniClienteBusqueda = new System.Windows.Forms.Label();
             this.mskDniClienteBusqueda = new System.Windows.Forms.MaskedTextBox();
             this.mrcBusquedaCliente = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.mrcDatosClientes = new System.Windows.Forms.GroupBox();
             this.lstActividadClienteConsulta = new System.Windows.Forms.ComboBox();
@@ -103,7 +103,7 @@
             // 
             // mrcBusquedaCliente
             // 
-            this.mrcBusquedaCliente.Controls.Add(this.button1);
+            this.mrcBusquedaCliente.Controls.Add(this.btnSalir);
             this.mrcBusquedaCliente.Controls.Add(this.btnBuscarCliente);
             this.mrcBusquedaCliente.Controls.Add(this.lblDniClienteBusqueda);
             this.mrcBusquedaCliente.Controls.Add(this.mskDniClienteBusqueda);
@@ -118,15 +118,15 @@
             this.mrcBusquedaCliente.TabStop = false;
             this.mrcBusquedaCliente.Text = "Buscar";
             // 
-            // button1
+            // btnSalir
             // 
-            this.button1.Location = new System.Drawing.Point(37, 60);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(77, 27);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Salir";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSalir.Location = new System.Drawing.Point(37, 60);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(77, 27);
+            this.btnSalir.TabIndex = 10;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
             // 
             // btnBuscarCliente
             // 
@@ -356,7 +356,7 @@
         private System.Windows.Forms.Label lblNombreClienteConsulta;
         private System.Windows.Forms.TextBox txtSaldoClienteConsulta;
         private System.Windows.Forms.Label lblSaldoClienteConsulta;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label lblDni;
         private System.Windows.Forms.TextBox txtDni;
         private System.Windows.Forms.Label lblActividad;
