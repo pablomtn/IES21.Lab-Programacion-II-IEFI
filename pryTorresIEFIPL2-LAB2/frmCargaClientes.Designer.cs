@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCargaClientes));
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
             this.txtApellidoCliente = new System.Windows.Forms.TextBox();
             this.btnCargarCliente = new System.Windows.Forms.Button();
@@ -56,7 +57,7 @@
             this.txtNombreCliente.MaxLength = 20;
             this.txtNombreCliente.Name = "txtNombreCliente";
             this.txtNombreCliente.Size = new System.Drawing.Size(116, 21);
-            this.txtNombreCliente.TabIndex = 0;
+            this.txtNombreCliente.TabIndex = 1;
             this.txtNombreCliente.TextChanged += new System.EventHandler(this.txtNombreCliente_TextChanged);
             // 
             // txtApellidoCliente
@@ -72,12 +73,13 @@
             // 
             // btnCargarCliente
             // 
+            this.btnCargarCliente.Enabled = false;
             this.btnCargarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargarCliente.Location = new System.Drawing.Point(162, 256);
+            this.btnCargarCliente.Location = new System.Drawing.Point(146, 256);
             this.btnCargarCliente.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.btnCargarCliente.Name = "btnCargarCliente";
-            this.btnCargarCliente.Size = new System.Drawing.Size(89, 28);
-            this.btnCargarCliente.TabIndex = 3;
+            this.btnCargarCliente.Size = new System.Drawing.Size(105, 28);
+            this.btnCargarCliente.TabIndex = 8;
             this.btnCargarCliente.Text = "Cargar";
             this.btnCargarCliente.UseVisualStyleBackColor = true;
             this.btnCargarCliente.Click += new System.EventHandler(this.btnCargarCliente_Click);
@@ -92,7 +94,6 @@
             this.lblNombreCliente.Size = new System.Drawing.Size(59, 16);
             this.lblNombreCliente.TabIndex = 4;
             this.lblNombreCliente.Text = "Nombre:";
-            this.lblNombreCliente.Click += new System.EventHandler(this.lblNombreCliente_Click);
             // 
             // lblApellidoNombre
             // 
@@ -136,7 +137,8 @@
             this.lstActividadCliente.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.lstActividadCliente.Name = "lstActividadCliente";
             this.lstActividadCliente.Size = new System.Drawing.Size(116, 23);
-            this.lstActividadCliente.TabIndex = 8;
+            this.lstActividadCliente.TabIndex = 6;
+            this.lstActividadCliente.SelectedIndexChanged += new System.EventHandler(this.lstActividadCliente_SelectedIndexChanged);
             // 
             // lblBarrioCliente
             // 
@@ -158,7 +160,7 @@
             this.lstBarrioCliente.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.lstBarrioCliente.Name = "lstBarrioCliente";
             this.lstBarrioCliente.Size = new System.Drawing.Size(116, 23);
-            this.lstBarrioCliente.TabIndex = 12;
+            this.lstBarrioCliente.TabIndex = 4;
             this.lstBarrioCliente.SelectedIndexChanged += new System.EventHandler(this.lstBarrioCliente_SelectedIndexChanged);
             // 
             // mrcCargaClientes
@@ -195,7 +197,8 @@
             this.txtDireccionCliente.MaxLength = 20;
             this.txtDireccionCliente.Name = "txtDireccionCliente";
             this.txtDireccionCliente.Size = new System.Drawing.Size(116, 21);
-            this.txtDireccionCliente.TabIndex = 16;
+            this.txtDireccionCliente.TabIndex = 5;
+            this.txtDireccionCliente.TextChanged += new System.EventHandler(this.txtDireccionCliente_TextChanged);
             // 
             // lblDireccionCliente
             // 
@@ -225,7 +228,8 @@
             this.txtSaldoCliente.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.txtSaldoCliente.Name = "txtSaldoCliente";
             this.txtSaldoCliente.Size = new System.Drawing.Size(116, 21);
-            this.txtSaldoCliente.TabIndex = 14;
+            this.txtSaldoCliente.TabIndex = 7;
+            this.txtSaldoCliente.TextChanged += new System.EventHandler(this.txtSaldoCliente_TextChanged);
             this.txtSaldoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSaldoCliente_KeyPress);
             // 
             // mskDniCliente
@@ -235,7 +239,8 @@
             this.mskDniCliente.Mask = "99999999";
             this.mskDniCliente.Name = "mskDniCliente";
             this.mskDniCliente.Size = new System.Drawing.Size(116, 21);
-            this.mskDniCliente.TabIndex = 13;
+            this.mskDniCliente.TabIndex = 3;
+            this.mskDniCliente.TextChanged += new System.EventHandler(this.mskDniCliente_TextChanged);
             // 
             // btnSalir
             // 
@@ -243,20 +248,22 @@
             this.btnSalir.Location = new System.Drawing.Point(7, 256);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(89, 28);
-            this.btnSalir.TabIndex = 14;
+            this.btnSalir.Size = new System.Drawing.Size(105, 28);
+            this.btnSalir.TabIndex = 9;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // frmCargaClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(263, 345);
+            this.ClientSize = new System.Drawing.Size(263, 292);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.mrcCargaClientes);
             this.Controls.Add(this.btnCargarCliente);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.Name = "frmCargaClientes";
             this.Text = "Carga Clientes";

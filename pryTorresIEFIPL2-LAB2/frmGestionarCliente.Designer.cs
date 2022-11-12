@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtDniClienteBusqueda = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionarCliente));
             this.txtApellidoClienteConsulta = new System.Windows.Forms.TextBox();
             this.txtNombreClienteConsulta = new System.Windows.Forms.TextBox();
             this.lblDniClienteBusqueda = new System.Windows.Forms.Label();
@@ -36,6 +36,7 @@
             this.mrcBusquedaCliente = new System.Windows.Forms.GroupBox();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnBuscarCliente = new System.Windows.Forms.Button();
+            this.txtDniClienteBusqueda = new System.Windows.Forms.TextBox();
             this.mrcDatosClientes = new System.Windows.Forms.GroupBox();
             this.lstActividadClienteConsulta = new System.Windows.Forms.ComboBox();
             this.lstBarrioConsultaCliente = new System.Windows.Forms.ComboBox();
@@ -55,14 +56,6 @@
             this.mrcBusquedaCliente.SuspendLayout();
             this.mrcDatosClientes.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // txtDniClienteBusqueda
-            // 
-            this.txtDniClienteBusqueda.Location = new System.Drawing.Point(100, 30);
-            this.txtDniClienteBusqueda.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtDniClienteBusqueda.Name = "txtDniClienteBusqueda";
-            this.txtDniClienteBusqueda.Size = new System.Drawing.Size(116, 21);
-            this.txtDniClienteBusqueda.TabIndex = 0;
             // 
             // txtApellidoClienteConsulta
             // 
@@ -99,7 +92,8 @@
             this.mskDniClienteBusqueda.Mask = "99999999";
             this.mskDniClienteBusqueda.Name = "mskDniClienteBusqueda";
             this.mskDniClienteBusqueda.Size = new System.Drawing.Size(116, 21);
-            this.mskDniClienteBusqueda.TabIndex = 4;
+            this.mskDniClienteBusqueda.TabIndex = 1;
+            this.mskDniClienteBusqueda.TextChanged += new System.EventHandler(this.mskDniClienteBusqueda_TextChanged);
             // 
             // mrcBusquedaCliente
             // 
@@ -127,17 +121,27 @@
             this.btnSalir.TabIndex = 10;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnBuscarCliente
             // 
+            this.btnBuscarCliente.Enabled = false;
             this.btnBuscarCliente.Location = new System.Drawing.Point(140, 60);
             this.btnBuscarCliente.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnBuscarCliente.Name = "btnBuscarCliente";
             this.btnBuscarCliente.Size = new System.Drawing.Size(77, 27);
-            this.btnBuscarCliente.TabIndex = 5;
+            this.btnBuscarCliente.TabIndex = 2;
             this.btnBuscarCliente.Text = "Buscar";
             this.btnBuscarCliente.UseVisualStyleBackColor = true;
             this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
+            // 
+            // txtDniClienteBusqueda
+            // 
+            this.txtDniClienteBusqueda.Location = new System.Drawing.Point(100, 30);
+            this.txtDniClienteBusqueda.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtDniClienteBusqueda.Name = "txtDniClienteBusqueda";
+            this.txtDniClienteBusqueda.Size = new System.Drawing.Size(116, 21);
+            this.txtDniClienteBusqueda.TabIndex = 0;
             // 
             // mrcDatosClientes
             // 
@@ -285,6 +289,7 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Enabled = false;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Location = new System.Drawing.Point(9, 373);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -297,6 +302,7 @@
             // 
             // btnModificar
             // 
+            this.btnModificar.Enabled = false;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.Location = new System.Drawing.Point(105, 373);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -309,6 +315,7 @@
             // 
             // btnGuardar
             // 
+            this.btnGuardar.Enabled = false;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Location = new System.Drawing.Point(201, 373);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -323,13 +330,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(291, 421);
+            this.ClientSize = new System.Drawing.Size(291, 408);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.mrcDatosClientes);
             this.Controls.Add(this.mrcBusquedaCliente);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmGestionarCliente";
             this.Text = "Gestión Clientes";
@@ -343,8 +351,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtDniClienteBusqueda;
         private System.Windows.Forms.TextBox txtApellidoClienteConsulta;
         private System.Windows.Forms.TextBox txtNombreClienteConsulta;
         private System.Windows.Forms.Label lblDniClienteBusqueda;
@@ -368,5 +374,6 @@
         private System.Windows.Forms.Label lblDireccionClienteConsulta;
         private System.Windows.Forms.ComboBox lstBarrioConsultaCliente;
         private System.Windows.Forms.ComboBox lstActividadClienteConsulta;
+        private System.Windows.Forms.TextBox txtDniClienteBusqueda;
     }
 }

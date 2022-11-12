@@ -173,6 +173,7 @@
             this.Controls.Add(this.picPrincipal);
             this.Controls.Add(this.statusPrincipal);
             this.Controls.Add(this.mspPrincipal);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mspPrincipal;
             this.Name = "frmPrincipal";
             this.Text = "Principal";

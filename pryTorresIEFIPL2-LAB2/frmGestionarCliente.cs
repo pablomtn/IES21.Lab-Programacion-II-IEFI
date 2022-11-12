@@ -12,8 +12,6 @@ namespace pryTorresIEFIPL2_LAB2
 {
     public partial class frmGestionarCliente : Form
     {
-        public string varSeleccionListaDesplegableBarrio = "";
-        public string varSeleccionListaDesplegableActividad = "";
         public frmGestionarCliente()
         {
             InitializeComponent();
@@ -27,12 +25,16 @@ namespace pryTorresIEFIPL2_LAB2
             clsActividad objClaseActividad = new clsActividad();
             objClaseActividad.LlenarListaDesplegable(lstActividadClienteConsulta);
             lstActividadClienteConsulta.SelectedIndex = -1;
+     
             
 
         }
 
         private void btnBuscarCliente_Click(object sender, EventArgs e)
         {
+            
+            btnEliminar.Enabled = true;
+            btnModificar.Enabled = true;
             //Llamo a la clase y al procedimiento BUSCAR
             //traera la informacion que tengo cargadas en las
             //variables de la clase y posteriormente las mostrara
@@ -43,6 +45,8 @@ namespace pryTorresIEFIPL2_LAB2
             if (objClaseCliente.varDniDelCliente != varDNI)
             {
                 MessageBox.Show("El cliente no se encuentra en la base de datos");
+                btnEliminar.Enabled=false;
+                btnModificar.Enabled = false;
             }
             else
             {
@@ -64,6 +68,9 @@ namespace pryTorresIEFIPL2_LAB2
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            btnGuardar.Enabled = true;
+            btnEliminar.Enabled = false;
+            btnModificar.Enabled = false;
             HabilitarControles();
         
          
@@ -78,6 +85,10 @@ namespace pryTorresIEFIPL2_LAB2
             objClaseCliente.varActividadDelCliente = Convert.ToInt32(lstActividadClienteConsulta.SelectedValue);
             objClaseCliente.varSaldoDelCliente = Convert.ToDecimal(txtSaldoClienteConsulta.Text);
             objClaseCliente.Modificar(varDNI);
+            btnModificar.Enabled = true;
+            btnEliminar.Enabled = true;
+            btnGuardar.Enabled = false;
+
 
         }
         private void HabilitarControles()
@@ -89,6 +100,7 @@ namespace pryTorresIEFIPL2_LAB2
             txtSaldoClienteConsulta.ReadOnly = false;
             txtDireccionConsultaCliente.ReadOnly = false;
         }
+      
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
@@ -96,6 +108,7 @@ namespace pryTorresIEFIPL2_LAB2
             clsCliente objClaseCliente = new clsCliente();
             objClaseCliente.Eliminar(varDNI);
             LimpiarControles();
+            mskDniClienteBusqueda.Text = "";
         }
         private void LimpiarControles()
         {
@@ -103,14 +116,36 @@ namespace pryTorresIEFIPL2_LAB2
             txtNombreClienteConsulta.Text = "";
             txtDni.Text = "";
             txtSaldoClienteConsulta.Text = "";
-            lstActividadClienteConsulta.Text = "";
-            lstBarrioConsultaCliente.Text = "";
+            lstActividadClienteConsulta.SelectedIndex = -1;
+            lstBarrioConsultaCliente.SelectedIndex = -1;
             txtDireccionConsultaCliente.Text = "";
         }
 
         private void lstBarrioConsultaCliente_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void mskDniClienteBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            if (mskDniClienteBusqueda.Text != "")
+            {
+                btnBuscarCliente.Enabled = true;
+
+            }
+            else
+            {
+                btnBuscarCliente.Enabled = false;
+                btnEliminar.Enabled = false;
+                btnModificar.Enabled = false;
+                btnGuardar.Enabled = false;
+                LimpiarControles();
+            }
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

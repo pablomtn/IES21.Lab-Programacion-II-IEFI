@@ -45,7 +45,7 @@ namespace pryTorresIEFIPL2_LAB2
 
         private void lstBarrioCliente_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+            ControlarControles();
         }
 
         private void frmCargaClientes_Load(object sender, EventArgs e)
@@ -62,7 +62,7 @@ namespace pryTorresIEFIPL2_LAB2
 
         private void txtNombreCliente_TextChanged(object sender, EventArgs e)
         {
-
+            ControlarControles();
         }
         private void LimpiarControles()
         {
@@ -89,12 +89,53 @@ namespace pryTorresIEFIPL2_LAB2
 
         private void lblNombreCliente_Click(object sender, EventArgs e)
         {
-
+            ControlarControles();
         }
 
         private void txtApellidoCliente_TextChanged(object sender, EventArgs e)
         {
+            ControlarControles();
+        }
+        public void ControlarControles()
+        {
+            if (txtNombreCliente.Text != "" && txtApellidoCliente.Text != "" && txtDireccionCliente.Text != "" && mskDniCliente.Text != "" &&
+                lstActividadCliente.SelectedIndex != -1 && lstBarrioCliente.SelectedIndex != -1 && txtSaldoCliente.Text != "")
+            {
+                btnCargarCliente.Enabled = true;
+            }
+            else
+            {
+                btnCargarCliente.Enabled=false;
+            }
 
+
+        }
+
+   
+
+        private void mskDniCliente_TextChanged(object sender, EventArgs e)
+        {
+            ControlarControles();
+        }
+
+        private void txtDireccionCliente_TextChanged(object sender, EventArgs e)
+        {
+            ControlarControles();
+        }
+
+        private void lstActividadCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ControlarControles();
+        }
+
+        private void txtSaldoCliente_TextChanged(object sender, EventArgs e)
+        {
+            ControlarControles();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
