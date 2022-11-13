@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultaClientePorBarrio));
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnReportar = new System.Windows.Forms.Button();
             this.btnListar = new System.Windows.Forms.Button();
@@ -37,6 +38,8 @@
             this.columnaDos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lstBarrioConsulta = new System.Windows.Forms.ComboBox();
             this.lblBarrioConsulta = new System.Windows.Forms.Label();
+            this.prtVentana = new System.Windows.Forms.PrintDialog();
+            this.prtDocumento = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,6 +52,7 @@
             this.btnImprimir.TabIndex = 11;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnReportar
             // 
@@ -59,6 +63,7 @@
             this.btnReportar.TabIndex = 10;
             this.btnReportar.Text = "Reportar";
             this.btnReportar.UseVisualStyleBackColor = true;
+            this.btnReportar.Click += new System.EventHandler(this.btnReportar_Click);
             // 
             // btnListar
             // 
@@ -69,6 +74,7 @@
             this.btnListar.TabIndex = 9;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // dgvConsulta
             // 
@@ -109,6 +115,7 @@
             this.lstBarrioConsulta.Name = "lstBarrioConsulta";
             this.lstBarrioConsulta.Size = new System.Drawing.Size(187, 23);
             this.lstBarrioConsulta.TabIndex = 7;
+            this.lstBarrioConsulta.SelectedIndexChanged += new System.EventHandler(this.lstBarrioConsulta_SelectedIndexChanged);
             // 
             // lblBarrioConsulta
             // 
@@ -119,6 +126,14 @@
             this.lblBarrioConsulta.Size = new System.Drawing.Size(131, 16);
             this.lblBarrioConsulta.TabIndex = 6;
             this.lblBarrioConsulta.Text = "Seleccione el Barrio:";
+            // 
+            // prtVentana
+            // 
+            this.prtVentana.UseEXDialog = true;
+            // 
+            // prtDocumento
+            // 
+            this.prtDocumento.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.prtDocumento_PrintPage);
             // 
             // frmConsultaClientePorBarrio
             // 
@@ -131,8 +146,9 @@
             this.Controls.Add(this.dgvConsulta);
             this.Controls.Add(this.lstBarrioConsulta);
             this.Controls.Add(this.lblBarrioConsulta);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmConsultaClientePorBarrio";
-            this.Text = "frmConsultaClientePorBarrio";
+            this.Text = "Consulta por Barrio";
             this.Load += new System.EventHandler(this.frmConsultaClientePorBarrio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsulta)).EndInit();
             this.ResumeLayout(false);
@@ -151,5 +167,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn columnaDos;
         private System.Windows.Forms.ComboBox lstBarrioConsulta;
         private System.Windows.Forms.Label lblBarrioConsulta;
+        private System.Windows.Forms.PrintDialog prtVentana;
+        private System.Drawing.Printing.PrintDocument prtDocumento;
     }
 }

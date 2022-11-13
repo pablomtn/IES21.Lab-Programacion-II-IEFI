@@ -356,9 +356,6 @@ namespace pryTorresIEFIPL2_LAB2
                 //Es una tabla virtual que esta en la ram
                 OleDbDataReader DR = comandoBd.ExecuteReader();
                 dgvActividad.Rows.Clear();
-                string varDetalleBarrio = "";
-                clsBarrios objClaseBarrio = new clsBarrios();
-                clsActividad objClaseActividad = new clsActividad();
                 //Si hay filas en el DataReader entra el if
                 if (DR.HasRows)
                 {
@@ -388,7 +385,7 @@ namespace pryTorresIEFIPL2_LAB2
 
 
         }
-        public void Reportar(Int32 Actividad)
+        public void ReportarActividad(Int32 Actividad)
         {
 
             try
@@ -409,7 +406,7 @@ namespace pryTorresIEFIPL2_LAB2
                 //Es una tabla virtual que esta en la ram
                 OleDbDataReader DR = comandoBd.ExecuteReader();
                 //Inicializo el objeto StreamWriter para crear el archivo, false para que lo cree muchas veces
-                StreamWriter reporteClientes = new StreamWriter("ReporteClientes.csv", false);
+                StreamWriter reporteClientes = new StreamWriter("ReporteClientesActividad.csv", false);
                 reporteClientes.WriteLine("Listado de Clientes\n");
                 reporteClientes.WriteLine("DNI;Nombre;Apellido;Actividad");
                 Int32 varCantidadClientes = 0;
@@ -449,15 +446,25 @@ namespace pryTorresIEFIPL2_LAB2
             }
 
         }
-        //Vamos a estar rwcibiendo un objeto de PrintPage
-        public void Imprimir(PrintPageEventArgs reporte)
+        //Vamos a estar recibiendo un objeto de PrintPage
+ 
+        public void ImprimirActividad(PrintPageEventArgs reporte, Int32 varCodigoActividad)
         {
 
             try
             {
                 //Creacion del objeto para la fuente de la letra
-                Font TipoLetra = new Font("Arial", 12);
-                Int32 varEspacioEntreLinea = 200;
+                Font TipoLetra = new Font("Arial", 11);
+                Font Titulo = new Font("Arial", 20);
+                Font Subtitulo= new Font("Arial", 15);
+                //Nos permite imprimir una cadena de caracteres para el titulo y subtitulos
+                reporte.Graphics.DrawString("Listado Clientes por Actividad", Titulo, Brushes.Black, 250, 100);
+                reporte.Graphics.DrawString("DNI", Subtitulo, Brushes.Black, 100, 200);
+                reporte.Graphics.DrawString("Nombre", Subtitulo, Brushes.Black, 300, 200);
+                reporte.Graphics.DrawString("Apellido", Subtitulo, Brushes.Black, 500, 200);
+                reporte.Graphics.DrawString("Actividad", Subtitulo, Brushes.Black, 700, 200);   
+                //declaracion de variable para el intercalado de cada linea
+                Int32 varEspacioEntreLinea = 225;
                 //Recibe la ruta de la BD para conectarse
                 conexionBd.ConnectionString = varRutaAccesoBD;
                 //Abre la conexion de la BD, es un canal
@@ -470,42 +477,205 @@ namespace pryTorresIEFIPL2_LAB2
                 //Trae una tabla el comando
                 comandoBd.CommandType = CommandType.TableDirect;
                 comandoBd.CommandText = varTabla;
-                //El adaptador recibe los datos de la BD(lectura)
-                AdaptadorDeDatosBd = new OleDbDataAdapter(comandoBd);
-                //objeto que contiene lo que tiene la tabla, es una tabla virtual
-                DataSet LectorDataSet = new DataSet();
-                //Adaptamos los datos al data set
-                AdaptadorDeDatosBd.Fill(LectorDataSet, varTabla);
-                //Pregunta si hay filas en el DataSet
-                if (LectorDataSet.Tables[varTabla].Rows.Count > 0)
+                //Creacion del objeto datareader que toma lo del comando una vez ejecutado el comando
+                //Es una tabla virtual que esta en la ram
+                OleDbDataReader DR = comandoBd.ExecuteReader();
+                clsActividad objClaseActividad = new clsActividad();
+                string varActividad = "";
+                if (DR.HasRows)
+                {                 
+                        while (DR.Read())
+                        {
+                            if (DR.GetInt32(5) == varCodigoActividad)
+                            {
+                                varActividad = objClaseActividad.Buscar(DR.GetInt32(5));
+                                    //Nos permite imprimir una cadena de caracteres
+                                reporte.Graphics.DrawString(DR.GetInt32(2).ToString(), TipoLetra, Brushes.Black, 100, varEspacioEntreLinea);
+                                reporte.Graphics.DrawString(DR.GetString(0), TipoLetra, Brushes.Black, 300, varEspacioEntreLinea);
+                                reporte.Graphics.DrawString(DR.GetString(1), TipoLetra, Brushes.Black, 500, varEspacioEntreLinea);
+                                reporte.Graphics.DrawString(varActividad, TipoLetra, Brushes.Black, 700, varEspacioEntreLinea);
+                                varEspacioEntreLinea = varEspacioEntreLinea + 20;
+                            }
+                        } 
+                }
+                    conexionBd.Close();
+            }
+            catch (Exception mensaje)
+            {
+                MessageBox.Show(mensaje.Message);
+            }
+
+
+        }
+        public void ListarBarrio(Int32 Barrio, DataGridView dgvBarrio)
+        {
+
+            try
+            {
+                //Recibe la ruta de la BD para conectarse
+                conexionBd.ConnectionString = varRutaAccesoBD;
+                //Abre la conexion de la BD, es un canal
+                conexionBd.Open();
+                //Necesitamos mndar una orden para que nos traiga datos de la BD 
+                //usamos el objeto comando
+                //Indicamos la conexion que tiene que utilizar
+                comandoBd.Connection = conexionBd;
+                //Indicamos el tipo de comando
+                //Trae una tabla el comando
+                comandoBd.CommandType = CommandType.TableDirect;
+                comandoBd.CommandText = varTabla;
+                //Creacion del objeto datareader que toma lo del comando una vez ejecutado el comando
+                //Es una tabla virtual que esta en la ram
+                OleDbDataReader DR = comandoBd.ExecuteReader();
+                dgvBarrio.Rows.Clear();
+                //Si hay filas en el DataReader entra el if
+                if (DR.HasRows)
                 {
-                    foreach (DataRow fila in LectorDataSet.Tables[varTabla].Rows)
+                    //Mientras hayan datos para leer en el Datareader                 
+                    while (DR.Read())
                     {
-                        reporte.Graphics.DrawString(fila["DNI"].ToString(), TipoLetra, Brushes.Black, 100, varEspacioEntreLinea);
-                        reporte.Graphics.DrawString(fila["Nombre"].ToString(), TipoLetra, Brushes.Black, 200, varEspacioEntreLinea);
-                        reporte.Graphics.DrawString(fila["Apellido"].ToString(), TipoLetra, Brushes.Black, 300, varEspacioEntreLinea);
-                        reporte.Graphics.DrawString(fila["Actividad"].ToString(), TipoLetra, Brushes.Black, 400, varEspacioEntreLinea);
-                        varEspacioEntreLinea = varEspacioEntreLinea + 15;
 
-
+                        if (DR.GetInt32(3) == Barrio)
+                        {
+                            //Añade filas a la grilla tomando las posiciones de los campos de la tabla clientes
+                            dgvBarrio.Rows.Add(DR.GetInt32(2), DR.GetString(0), DR.GetString(1));
+                        }
                     }
 
+                }
+                conexionBd.Close();
+
+
+            }
+            catch (Exception mensaje)
+            {
+                MessageBox.Show(mensaje.Message);
+
+            }
+
+
+        }
+        public void ImprimirBarrio(PrintPageEventArgs reporte, Int32 varCodigoBarrio)
+        {
+
+            try
+            {
+                //Creacion del objeto para la fuente de la letra
+                Font TipoLetra = new Font("Arial", 11);
+                Font Titulo = new Font("Arial", 20);
+                Font Subtitulo = new Font("Arial", 15);
+                //Nos permite imprimir una cadena de caracteres para el titulo y subtitulos
+                reporte.Graphics.DrawString("Listado Clientes por Barrios", Titulo, Brushes.Black, 250, 100);
+                reporte.Graphics.DrawString("DNI", Subtitulo, Brushes.Black, 100, 200);
+                reporte.Graphics.DrawString("Nombre", Subtitulo, Brushes.Black, 300, 200);
+                reporte.Graphics.DrawString("Apellido", Subtitulo, Brushes.Black, 500, 200);
+                reporte.Graphics.DrawString("Barrio", Subtitulo, Brushes.Black, 700, 200);
+                //declaracion de variable para el intercalado de cada linea
+                Int32 varEspacioEntreLinea = 225;
+                //Recibe la ruta de la BD para conectarse
+                conexionBd.ConnectionString = varRutaAccesoBD;
+                //Abre la conexion de la BD, es un canal
+                conexionBd.Open();
+                //Necesitamos mndar una orden para que nos traiga datos de la BD 
+                //usamos el objeto comando
+                //Indicamos la conexion que tiene que utilizar
+                comandoBd.Connection = conexionBd;
+                //Indicamos el tipo de comando
+                //Trae una tabla el comando
+                comandoBd.CommandType = CommandType.TableDirect;
+                comandoBd.CommandText = varTabla;
+                //Creacion del objeto datareader que toma lo del comando una vez ejecutado el comando
+                //Es una tabla virtual que esta en la ram
+                OleDbDataReader DR = comandoBd.ExecuteReader();
+                clsBarrios objClaseBarrio = new clsBarrios();
+                string varBarrio = "";
+                if (DR.HasRows)
+                {
+                    while (DR.Read())
+                    {
+                        if (DR.GetInt32(3) == varCodigoBarrio)
+                        {
+                            varBarrio = objClaseBarrio.Buscar(DR.GetInt32(3));
+                            //Nos permite imprimir una cadena de caracteres
+                            reporte.Graphics.DrawString(DR.GetInt32(2).ToString(), TipoLetra, Brushes.Black, 100, varEspacioEntreLinea);
+                            reporte.Graphics.DrawString(DR.GetString(0), TipoLetra, Brushes.Black, 300, varEspacioEntreLinea);
+                            reporte.Graphics.DrawString(DR.GetString(1), TipoLetra, Brushes.Black, 500, varEspacioEntreLinea);
+                            reporte.Graphics.DrawString(varBarrio, TipoLetra, Brushes.Black, 700, varEspacioEntreLinea);
+                            varEspacioEntreLinea = varEspacioEntreLinea + 20;
+                        }
+                    }
                 }
                 conexionBd.Close();
             }
             catch (Exception mensaje)
             {
-
                 MessageBox.Show(mensaje.Message);
             }
 
 
         }
 
+        public void ReportarBarrio(Int32 CodigoBarrio)
+        {
 
+            try
+            {
+                //Recibe la ruta de la BD para conectarse
+                conexionBd.ConnectionString = varRutaAccesoBD;
+                //Abre la conexion de la BD, es un canal
+                conexionBd.Open();
+                //Necesitamos mndar una orden para que nos traiga datos de la BD 
+                //usamos el objeto comando
+                //Indicamos la conexion que tiene que utilizar
+                comandoBd.Connection = conexionBd;
+                //Indicamos el tipo de comando
+                //Trae una tabla el comando
+                comandoBd.CommandType = CommandType.TableDirect;
+                comandoBd.CommandText = varTabla;
+                //Creacion del objeto datareader que toma lo del comando una vez ejecutado el comando
+                //Es una tabla virtual que esta en la ram
+                OleDbDataReader DR = comandoBd.ExecuteReader();
+                //Inicializo el objeto StreamWriter para crear el archivo, false para que lo cree muchas veces
+                StreamWriter reporteClientes = new StreamWriter("ReporteClientesBarrios.csv", false);
+                reporteClientes.WriteLine("Listado de Clientes\n");
+                reporteClientes.WriteLine("DNI;Nombre;Apellido;Barrio");
+                Int32 varCantidadClientes = 0;
+                clsBarrios objClaseBarrio = new clsBarrios();
+                string varBarrio = "";
+                //Si hay filas en el DataReader entra el if
+                if (DR.HasRows)
+                {
 
+                    while (DR.Read())
+                    {
+                        if (CodigoBarrio == DR.GetInt32(3))
+                        {
+                            varBarrio = objClaseBarrio.Buscar(DR.GetInt32(3));
+                            reporteClientes.Write(DR.GetInt32(2));
+                            reporteClientes.Write(";");
+                            reporteClientes.Write(DR.GetString(0));
+                            reporteClientes.Write(";");
+                            reporteClientes.Write(DR.GetString(1));
+                            reporteClientes.Write(";");
+                            reporteClientes.WriteLine(varBarrio);
+                            varCantidadClientes++;
+                        }
 
+                    }
 
+                    reporteClientes.Write("\nCantidad de clientes:");
+                    reporteClientes.WriteLine(varCantidadClientes);
+                }
+                conexionBd.Close();
+                reporteClientes.Close();
+            }
+            catch (Exception mensaje)
+            {
+                MessageBox.Show(mensaje.Message);
+
+            }
+
+        }
 
 
 

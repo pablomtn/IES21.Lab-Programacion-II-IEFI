@@ -47,6 +47,7 @@ namespace pryTorresIEFIPL2_LAB2
                 MessageBox.Show("El cliente no se encuentra en la base de datos");
                 btnEliminar.Enabled=false;
                 btnModificar.Enabled = false;
+                mskDniClienteBusqueda.Text = "";
             }
             else
             {

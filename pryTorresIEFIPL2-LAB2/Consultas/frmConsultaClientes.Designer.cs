@@ -141,7 +141,7 @@
             this.mrcListarClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mrcListarClientes.Location = new System.Drawing.Point(12, 12);
             this.mrcListarClientes.Name = "mrcListarClientes";
-            this.mrcListarClientes.Size = new System.Drawing.Size(761, 298);
+            this.mrcListarClientes.Size = new System.Drawing.Size(761, 302);
             this.mrcListarClientes.TabIndex = 3;
             this.mrcListarClientes.TabStop = false;
             this.mrcListarClientes.Text = "Clientes:";
@@ -257,7 +257,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 317);
+            this.ClientSize = new System.Drawing.Size(779, 320);
             this.Controls.Add(this.mrcListarClientes);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmConsultaClientes";

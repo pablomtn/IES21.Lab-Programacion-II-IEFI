@@ -96,6 +96,7 @@
             // 
             // btnListar
             // 
+            this.btnListar.Enabled = false;
             this.btnListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListar.Location = new System.Drawing.Point(259, 194);
             this.btnListar.Name = "btnListar";
@@ -107,6 +108,7 @@
             // 
             // btnReportar
             // 
+            this.btnReportar.Enabled = false;
             this.btnReportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportar.Location = new System.Drawing.Point(137, 194);
             this.btnReportar.Name = "btnReportar";
@@ -118,6 +120,7 @@
             // 
             // btnImprimir
             // 
+            this.btnImprimir.Enabled = false;
             this.btnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimir.Location = new System.Drawing.Point(15, 194);
             this.btnImprimir.Name = "btnImprimir";
