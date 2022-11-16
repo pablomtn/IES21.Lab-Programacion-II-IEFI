@@ -38,12 +38,12 @@
             this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.txtDniClienteBusqueda = new System.Windows.Forms.TextBox();
             this.mrcDatosClientes = new System.Windows.Forms.GroupBox();
+            this.mskDniConsulta = new System.Windows.Forms.MaskedTextBox();
             this.lstActividadClienteConsulta = new System.Windows.Forms.ComboBox();
             this.lstBarrioConsultaCliente = new System.Windows.Forms.ComboBox();
             this.txtDireccionConsultaCliente = new System.Windows.Forms.TextBox();
             this.lblDireccionClienteConsulta = new System.Windows.Forms.Label();
             this.lblDni = new System.Windows.Forms.Label();
-            this.txtDni = new System.Windows.Forms.TextBox();
             this.lblActividad = new System.Windows.Forms.Label();
             this.lblSaldoClienteConsulta = new System.Windows.Forms.Label();
             this.lblBarrio = new System.Windows.Forms.Label();
@@ -145,12 +145,12 @@
             // 
             // mrcDatosClientes
             // 
+            this.mrcDatosClientes.Controls.Add(this.mskDniConsulta);
             this.mrcDatosClientes.Controls.Add(this.lstActividadClienteConsulta);
             this.mrcDatosClientes.Controls.Add(this.lstBarrioConsultaCliente);
             this.mrcDatosClientes.Controls.Add(this.txtDireccionConsultaCliente);
             this.mrcDatosClientes.Controls.Add(this.lblDireccionClienteConsulta);
             this.mrcDatosClientes.Controls.Add(this.lblDni);
-            this.mrcDatosClientes.Controls.Add(this.txtDni);
             this.mrcDatosClientes.Controls.Add(this.lblActividad);
             this.mrcDatosClientes.Controls.Add(this.lblSaldoClienteConsulta);
             this.mrcDatosClientes.Controls.Add(this.lblBarrio);
@@ -168,6 +168,16 @@
             this.mrcDatosClientes.TabIndex = 6;
             this.mrcDatosClientes.TabStop = false;
             this.mrcDatosClientes.Text = "Datos del Cliente";
+            // 
+            // mskDniConsulta
+            // 
+            this.mskDniConsulta.Enabled = false;
+            this.mskDniConsulta.Location = new System.Drawing.Point(120, 92);
+            this.mskDniConsulta.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.mskDniConsulta.Mask = "99999999";
+            this.mskDniConsulta.Name = "mskDniConsulta";
+            this.mskDniConsulta.Size = new System.Drawing.Size(116, 21);
+            this.mskDniConsulta.TabIndex = 11;
             // 
             // lstActividadClienteConsulta
             // 
@@ -198,6 +208,7 @@
             this.txtDireccionConsultaCliente.ReadOnly = true;
             this.txtDireccionConsultaCliente.Size = new System.Drawing.Size(116, 21);
             this.txtDireccionConsultaCliente.TabIndex = 17;
+            this.txtDireccionConsultaCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDireccionConsultaCliente_KeyPress);
             // 
             // lblDireccionClienteConsulta
             // 
@@ -218,15 +229,6 @@
             this.lblDni.Size = new System.Drawing.Size(30, 16);
             this.lblDni.TabIndex = 15;
             this.lblDni.Text = "DNI";
-            // 
-            // txtDni
-            // 
-            this.txtDni.Location = new System.Drawing.Point(120, 92);
-            this.txtDni.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtDni.Name = "txtDni";
-            this.txtDni.ReadOnly = true;
-            this.txtDni.Size = new System.Drawing.Size(116, 21);
-            this.txtDni.TabIndex = 14;
             // 
             // lblActividad
             // 
@@ -266,6 +268,7 @@
             this.txtSaldoClienteConsulta.ReadOnly = true;
             this.txtSaldoClienteConsulta.Size = new System.Drawing.Size(116, 21);
             this.txtSaldoClienteConsulta.TabIndex = 9;
+            this.txtSaldoClienteConsulta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSaldoClienteConsulta_KeyPress);
             // 
             // lblApellidoCliente
             // 
@@ -364,7 +367,6 @@
         private System.Windows.Forms.Label lblSaldoClienteConsulta;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label lblDni;
-        private System.Windows.Forms.TextBox txtDni;
         private System.Windows.Forms.Label lblActividad;
         private System.Windows.Forms.Label lblBarrio;
         private System.Windows.Forms.Button btnEliminar;
@@ -375,5 +377,6 @@
         private System.Windows.Forms.ComboBox lstBarrioConsultaCliente;
         private System.Windows.Forms.ComboBox lstActividadClienteConsulta;
         private System.Windows.Forms.TextBox txtDniClienteBusqueda;
+        private System.Windows.Forms.MaskedTextBox mskDniConsulta;
     }
 }

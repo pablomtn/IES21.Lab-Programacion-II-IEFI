@@ -23,7 +23,7 @@ namespace pryTorresIEFIPL2_LAB2
             objClaseBarrio.LlenarListaDesplegable(lstBarrioConsulta);
             lstBarrioConsulta.SelectedIndex = -1;
             btnImprimir.Enabled = false;
-            btnListar.Enabled = false;
+            btnListarPorBarrio.Enabled = false;
             btnReportar.Enabled = false;
         }
 
@@ -49,7 +49,7 @@ namespace pryTorresIEFIPL2_LAB2
         {
             if (lstBarrioConsulta.SelectedIndex != -1)
             {
-                btnListar.Enabled = true;
+                btnListarPorBarrio.Enabled = true;
 
             }
             btnReportar.Enabled = false;

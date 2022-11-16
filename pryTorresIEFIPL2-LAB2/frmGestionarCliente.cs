@@ -53,7 +53,7 @@ namespace pryTorresIEFIPL2_LAB2
             {
                 txtNombreClienteConsulta.Text = objClaseCliente.varNombreDelCliente;
                 txtApellidoClienteConsulta.Text = objClaseCliente.varApellidoDelCliente;
-                txtDni.Text = Convert.ToString(objClaseCliente.varDniDelCliente);
+                mskDniConsulta.Text = Convert.ToString(objClaseCliente.varDniDelCliente);
                 clsBarrios objClaseBarrio = new clsBarrios();
                 Int32 varCodigoBarrio = objClaseCliente.varBarrioDelCliente;           
                 lstBarrioConsultaCliente.Text = objClaseBarrio.Buscar(varCodigoBarrio);
@@ -80,11 +80,13 @@ namespace pryTorresIEFIPL2_LAB2
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             Int32 varDNI = Convert.ToInt32(mskDniClienteBusqueda.Text);
+
             clsCliente objClaseCliente = new clsCliente();
             objClaseCliente.varBarrioDelCliente = Convert.ToInt32(lstBarrioConsultaCliente.SelectedValue);
             objClaseCliente.varDireccionDelCliente = txtDireccionConsultaCliente.Text;
             objClaseCliente.varActividadDelCliente = Convert.ToInt32(lstActividadClienteConsulta.SelectedValue);
             objClaseCliente.varSaldoDelCliente = Convert.ToDecimal(txtSaldoClienteConsulta.Text);
+
             objClaseCliente.Modificar(varDNI);
             btnModificar.Enabled = true;
             btnEliminar.Enabled = true;
@@ -97,9 +99,9 @@ namespace pryTorresIEFIPL2_LAB2
 
             lstBarrioConsultaCliente.Enabled = true;
             lstActividadClienteConsulta.Enabled = true;
-            txtDni.ReadOnly = false;
             txtSaldoClienteConsulta.ReadOnly = false;
             txtDireccionConsultaCliente.ReadOnly = false;
+ 
         }
       
 
@@ -115,7 +117,7 @@ namespace pryTorresIEFIPL2_LAB2
         {
             txtApellidoClienteConsulta.Text = "";
             txtNombreClienteConsulta.Text = "";
-            txtDni.Text = "";
+            mskDniClienteBusqueda.Text = "";
             txtSaldoClienteConsulta.Text = "";
             lstActividadClienteConsulta.SelectedIndex = -1;
             lstBarrioConsultaCliente.SelectedIndex = -1;
@@ -147,6 +149,30 @@ namespace pryTorresIEFIPL2_LAB2
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        //Procedimiento para que no se pueda escribir numeros y caracteres especiales
+
+
+
+        private void txtDireccionConsultaCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //keychar indica si la tecla presionada ya que recoge el numero ascii de la tecla y verifica que no sea numeros,caracteres especiales
+            if ((e.KeyChar >= 33 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+                //El handled controla el evento y permite que no se muestren los valores
+                e.Handled = true;
+            }
+        }
+
+        private void txtSaldoClienteConsulta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //keychar indica si la tecla presionada ya que recoge el numero ascii de la tecla y verifica que no sea numeros,caracteres especiales
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                //El handled controla el evento y permite que no se muestren los valores no permitidos
+                e.Handled = true;
+            }
         }
     }
 }

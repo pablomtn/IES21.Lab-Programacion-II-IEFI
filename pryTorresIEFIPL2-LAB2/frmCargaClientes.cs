@@ -20,9 +20,6 @@ namespace pryTorresIEFIPL2_LAB2
         public OleDbCommand comandoBd = new OleDbCommand();
         //Nos sirve para adaptar los datos de la BD a datos reconocidos por .NET
         public OleDbDataAdapter AdaptadorDeDatosBd = new OleDbDataAdapter();
-        //Ruta de la base de datos
-        string varRutaAccesoBD = "Provider = Microsoft.ACE.OLEDB.12.0;Data Source=" + "BD_Clientes.accdb";
-        string varTabla = "Clientes";
         public frmCargaClientes()
         {
             InitializeComponent();
@@ -136,6 +133,37 @@ namespace pryTorresIEFIPL2_LAB2
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        //Procedimiento para que no se pueda escribir numeros y caracteres especiales
+        private void Keypress(KeyPressEventArgs e)
+        {
+            //keychar indica si la tecla presionada ya que recoge el numero ascii de la tecla y verifica que no sea numeros,caracteres especiales
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+                //El handled controla el evento y permite que no se muestren los valores
+                e.Handled = true;
+            }
+        }
+
+        private void txtNombreCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Keypress(e);
+        }
+
+        private void txtApellidoCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Keypress(e);
+        }
+
+        private void txtDireccionCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //keychar indica si la tecla presionada ya que recoge el numero ascii de la tecla y verifica que no sea numeros,caracteres especiales
+            if ((e.KeyChar >= 33 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+                //El handled controla el evento y permite que no se muestren los valores
+                e.Handled = true;
+            }
         }
     }
 }

@@ -21,7 +21,7 @@ namespace pryTorresIEFIPL2_LAB2
         {
             if (lstActividadConsulta.SelectedIndex != -1)
             { 
-                btnListar.Enabled = true;
+                btnListarPorActividad.Enabled = true;
               
             }
             btnReportar.Enabled = false;
@@ -34,7 +34,7 @@ namespace pryTorresIEFIPL2_LAB2
             objClaseCliente.LlenarListaDesplegable(lstActividadConsulta);
             lstActividadConsulta.SelectedIndex = -1;
             btnImprimir.Enabled = false;
-            btnListar.Enabled = false;
+            btnListarPorActividad.Enabled = false;
             btnReportar.Enabled = false;
         }
 

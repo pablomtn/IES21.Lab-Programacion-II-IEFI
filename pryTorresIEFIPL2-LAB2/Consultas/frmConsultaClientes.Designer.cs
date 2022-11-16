@@ -37,7 +37,7 @@
             this.columnaSiete = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnaCinco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnaCuatro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnListar = new System.Windows.Forms.Button();
+            this.btnListarTotalClientes = new System.Windows.Forms.Button();
             this.mrcListarClientes = new System.Windows.Forms.GroupBox();
             this.lblSaldoMenor = new System.Windows.Forms.Label();
             this.lblCantidadClientes = new System.Windows.Forms.Label();
@@ -112,16 +112,16 @@
             this.columnaCuatro.Name = "columnaCuatro";
             this.columnaCuatro.ReadOnly = true;
             // 
-            // btnListar
+            // btnListarTotalClientes
             // 
-            this.btnListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListar.Location = new System.Drawing.Point(435, 178);
-            this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(313, 23);
-            this.btnListar.TabIndex = 1;
-            this.btnListar.Text = "Listar";
-            this.btnListar.UseVisualStyleBackColor = true;
-            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
+            this.btnListarTotalClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListarTotalClientes.Location = new System.Drawing.Point(435, 178);
+            this.btnListarTotalClientes.Name = "btnListarTotalClientes";
+            this.btnListarTotalClientes.Size = new System.Drawing.Size(313, 23);
+            this.btnListarTotalClientes.TabIndex = 1;
+            this.btnListarTotalClientes.Text = "Listar";
+            this.btnListarTotalClientes.UseVisualStyleBackColor = true;
+            this.btnListarTotalClientes.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // mrcListarClientes
             // 
@@ -137,7 +137,7 @@
             this.mrcListarClientes.Controls.Add(this.btnSalir);
             this.mrcListarClientes.Controls.Add(this.txtSaldoMenor);
             this.mrcListarClientes.Controls.Add(this.dgvConsultaClientes);
-            this.mrcListarClientes.Controls.Add(this.btnListar);
+            this.mrcListarClientes.Controls.Add(this.btnListarTotalClientes);
             this.mrcListarClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mrcListarClientes.Location = new System.Drawing.Point(12, 12);
             this.mrcListarClientes.Name = "mrcListarClientes";
@@ -273,7 +273,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvConsultaClientes;
-        private System.Windows.Forms.Button btnListar;
+        private System.Windows.Forms.Button btnListarTotalClientes;
         private System.Windows.Forms.GroupBox mrcListarClientes;
         private System.Windows.Forms.TextBox txtPromedioSaldos;
         private System.Windows.Forms.TextBox txtCantidadClientes;

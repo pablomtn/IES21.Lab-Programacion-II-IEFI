@@ -35,7 +35,7 @@
             this.columnaCero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnaUno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnaDos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnListar = new System.Windows.Forms.Button();
+            this.btnListarPorActividad = new System.Windows.Forms.Button();
             this.btnReportar = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.prtVentana = new System.Windows.Forms.PrintDialog();
@@ -94,17 +94,17 @@
             this.columnaDos.Name = "columnaDos";
             this.columnaDos.ReadOnly = true;
             // 
-            // btnListar
+            // btnListarPorActividad
             // 
-            this.btnListar.Enabled = false;
-            this.btnListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListar.Location = new System.Drawing.Point(259, 194);
-            this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(97, 23);
-            this.btnListar.TabIndex = 3;
-            this.btnListar.Text = "Listar";
-            this.btnListar.UseVisualStyleBackColor = true;
-            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
+            this.btnListarPorActividad.Enabled = false;
+            this.btnListarPorActividad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListarPorActividad.Location = new System.Drawing.Point(259, 194);
+            this.btnListarPorActividad.Name = "btnListarPorActividad";
+            this.btnListarPorActividad.Size = new System.Drawing.Size(97, 23);
+            this.btnListarPorActividad.TabIndex = 3;
+            this.btnListarPorActividad.Text = "Listar";
+            this.btnListarPorActividad.UseVisualStyleBackColor = true;
+            this.btnListarPorActividad.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // btnReportar
             // 
@@ -145,7 +145,7 @@
             this.ClientSize = new System.Drawing.Size(369, 225);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnReportar);
-            this.Controls.Add(this.btnListar);
+            this.Controls.Add(this.btnListarPorActividad);
             this.Controls.Add(this.dgvConsulta);
             this.Controls.Add(this.lstActividadConsulta);
             this.Controls.Add(this.lblActiviadadConsulta);
@@ -167,7 +167,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn columnaCero;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnaUno;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnaDos;
-        private System.Windows.Forms.Button btnListar;
+        private System.Windows.Forms.Button btnListarPorActividad;
         private System.Windows.Forms.Button btnReportar;
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.PrintDialog prtVentana;

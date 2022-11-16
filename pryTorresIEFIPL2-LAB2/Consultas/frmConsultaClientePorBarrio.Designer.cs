@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultaClientePorBarrio));
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnReportar = new System.Windows.Forms.Button();
-            this.btnListar = new System.Windows.Forms.Button();
+            this.btnListarPorBarrio = new System.Windows.Forms.Button();
             this.dgvConsulta = new System.Windows.Forms.DataGridView();
             this.columnaCero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnaUno = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,16 +65,16 @@
             this.btnReportar.UseVisualStyleBackColor = true;
             this.btnReportar.Click += new System.EventHandler(this.btnReportar_Click);
             // 
-            // btnListar
+            // btnListarPorBarrio
             // 
-            this.btnListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListar.Location = new System.Drawing.Point(259, 194);
-            this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(97, 23);
-            this.btnListar.TabIndex = 9;
-            this.btnListar.Text = "Listar";
-            this.btnListar.UseVisualStyleBackColor = true;
-            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
+            this.btnListarPorBarrio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListarPorBarrio.Location = new System.Drawing.Point(259, 194);
+            this.btnListarPorBarrio.Name = "btnListarPorBarrio";
+            this.btnListarPorBarrio.Size = new System.Drawing.Size(97, 23);
+            this.btnListarPorBarrio.TabIndex = 9;
+            this.btnListarPorBarrio.Text = "Listar";
+            this.btnListarPorBarrio.UseVisualStyleBackColor = true;
+            this.btnListarPorBarrio.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // dgvConsulta
             // 
@@ -142,7 +142,7 @@
             this.ClientSize = new System.Drawing.Size(370, 225);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnReportar);
-            this.Controls.Add(this.btnListar);
+            this.Controls.Add(this.btnListarPorBarrio);
             this.Controls.Add(this.dgvConsulta);
             this.Controls.Add(this.lstBarrioConsulta);
             this.Controls.Add(this.lblBarrioConsulta);
@@ -160,7 +160,7 @@
 
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Button btnReportar;
-        private System.Windows.Forms.Button btnListar;
+        private System.Windows.Forms.Button btnListarPorBarrio;
         private System.Windows.Forms.DataGridView dgvConsulta;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnaCero;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnaUno;

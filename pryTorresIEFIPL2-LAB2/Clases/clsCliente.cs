@@ -284,6 +284,7 @@ namespace pryTorresIEFIPL2_LAB2
         public void Modificar(Int32 Dni)
         {
             //Instruccion sql
+            //string sql =                                                                                                               
             string Sql = "UPDATE CLIENTES SET [BARRIO] = " + varBarrioCliente + ", [DIRECCION] = '" + varDireccionCliente + "', [ACTIVIDAD] = " + varActividadCliente + ", [SALDO] = " + varSaldoCliente + "  WHERE [DNI] = " + Dni + "";
             //Recibe la ruta de la BD para conectarse
             conexionBd.ConnectionString = varRutaAccesoBD;
@@ -462,7 +463,8 @@ namespace pryTorresIEFIPL2_LAB2
                 reporte.Graphics.DrawString("DNI", Subtitulo, Brushes.Black, 100, 200);
                 reporte.Graphics.DrawString("Nombre", Subtitulo, Brushes.Black, 300, 200);
                 reporte.Graphics.DrawString("Apellido", Subtitulo, Brushes.Black, 500, 200);
-                reporte.Graphics.DrawString("Actividad", Subtitulo, Brushes.Black, 700, 200);   
+                reporte.Graphics.DrawString("Actividad", Subtitulo, Brushes.Black, 700, 200);
+               
                 //declaracion de variable para el intercalado de cada linea
                 Int32 varEspacioEntreLinea = 225;
                 //Recibe la ruta de la BD para conectarse
@@ -482,6 +484,7 @@ namespace pryTorresIEFIPL2_LAB2
                 OleDbDataReader DR = comandoBd.ExecuteReader();
                 clsActividad objClaseActividad = new clsActividad();
                 string varActividad = "";
+                Int32 varContadorClientes = 0;
                 if (DR.HasRows)
                 {                 
                         while (DR.Read())
@@ -489,14 +492,18 @@ namespace pryTorresIEFIPL2_LAB2
                             if (DR.GetInt32(5) == varCodigoActividad)
                             {
                                 varActividad = objClaseActividad.Buscar(DR.GetInt32(5));
+                                varContadorClientes++;
                                     //Nos permite imprimir una cadena de caracteres
                                 reporte.Graphics.DrawString(DR.GetInt32(2).ToString(), TipoLetra, Brushes.Black, 100, varEspacioEntreLinea);
                                 reporte.Graphics.DrawString(DR.GetString(0), TipoLetra, Brushes.Black, 300, varEspacioEntreLinea);
                                 reporte.Graphics.DrawString(DR.GetString(1), TipoLetra, Brushes.Black, 500, varEspacioEntreLinea);
                                 reporte.Graphics.DrawString(varActividad, TipoLetra, Brushes.Black, 700, varEspacioEntreLinea);
-                                varEspacioEntreLinea = varEspacioEntreLinea + 20;
+                                
+                                 varEspacioEntreLinea = varEspacioEntreLinea + 20;
+
                             }
-                        } 
+                        }
+                         reporte.Graphics.DrawString("Cantidad Clientes:" + "" + varContadorClientes, TipoLetra, Brushes.Black, 100, varEspacioEntreLinea + 20);
                 }
                     conexionBd.Close();
             }
@@ -589,6 +596,7 @@ namespace pryTorresIEFIPL2_LAB2
                 OleDbDataReader DR = comandoBd.ExecuteReader();
                 clsBarrios objClaseBarrio = new clsBarrios();
                 string varBarrio = "";
+                Int32 varContadorClientes = 0;
                 if (DR.HasRows)
                 {
                     while (DR.Read())
@@ -596,6 +604,7 @@ namespace pryTorresIEFIPL2_LAB2
                         if (DR.GetInt32(3) == varCodigoBarrio)
                         {
                             varBarrio = objClaseBarrio.Buscar(DR.GetInt32(3));
+                            varContadorClientes++;
                             //Nos permite imprimir una cadena de caracteres
                             reporte.Graphics.DrawString(DR.GetInt32(2).ToString(), TipoLetra, Brushes.Black, 100, varEspacioEntreLinea);
                             reporte.Graphics.DrawString(DR.GetString(0), TipoLetra, Brushes.Black, 300, varEspacioEntreLinea);
@@ -604,6 +613,7 @@ namespace pryTorresIEFIPL2_LAB2
                             varEspacioEntreLinea = varEspacioEntreLinea + 20;
                         }
                     }
+                    reporte.Graphics.DrawString("Cantidad Clientes:" + "" + varContadorClientes, TipoLetra, Brushes.Black, 100, varEspacioEntreLinea + 20);
                 }
                 conexionBd.Close();
             }

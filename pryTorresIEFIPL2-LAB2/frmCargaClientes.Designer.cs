@@ -59,6 +59,7 @@
             this.txtNombreCliente.Size = new System.Drawing.Size(116, 21);
             this.txtNombreCliente.TabIndex = 1;
             this.txtNombreCliente.TextChanged += new System.EventHandler(this.txtNombreCliente_TextChanged);
+            this.txtNombreCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreCliente_KeyPress);
             // 
             // txtApellidoCliente
             // 
@@ -70,6 +71,7 @@
             this.txtApellidoCliente.Size = new System.Drawing.Size(116, 21);
             this.txtApellidoCliente.TabIndex = 2;
             this.txtApellidoCliente.TextChanged += new System.EventHandler(this.txtApellidoCliente_TextChanged);
+            this.txtApellidoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidoCliente_KeyPress);
             // 
             // btnCargarCliente
             // 
@@ -199,6 +201,7 @@
             this.txtDireccionCliente.Size = new System.Drawing.Size(116, 21);
             this.txtDireccionCliente.TabIndex = 5;
             this.txtDireccionCliente.TextChanged += new System.EventHandler(this.txtDireccionCliente_TextChanged);
+            this.txtDireccionCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDireccionCliente_KeyPress);
             // 
             // lblDireccionCliente
             // 
@@ -258,6 +261,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(263, 292);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.mrcCargaClientes);
