@@ -25,7 +25,8 @@ namespace pryTorresIEFIPL2_LAB2
 
         private void sistemaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmSistema objSistema = new frmSistema();
+            objSistema.ShowDialog();
         }
 
         private void consultarToolStripMenuItem_Click(object sender, EventArgs e)

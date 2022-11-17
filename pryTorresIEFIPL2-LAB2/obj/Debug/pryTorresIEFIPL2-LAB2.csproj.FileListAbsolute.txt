@@ -44,3 +44,4 @@ C:\Users\Alumnos\Source\Repos\Lab2-PL2-IEFI\pryTorresIEFIPL2-LAB2\obj\Debug\pryT
 C:\Users\Alumnos\Source\Repos\Lab2-PL2-IEFI\pryTorresIEFIPL2-LAB2\obj\Debug\pryTorresIEFIPL2-LAB2.pdb
 C:\Users\PABLO\Source\Repos\Lab2-PL2-IEFI\pryTorresIEFIPL2-LAB2\obj\Debug\pryTorresIEFIPL2_LAB2.frmConsultaClientePorActividad.resources
 C:\Users\PABLO\source\repos\Lab2-PL2-IEFI\pryTorresIEFIPL2-LAB2\obj\Debug\pryTorresIEFIPL2_LAB2.frmConsultaClientePorBarrio.resources
+C:\Users\PABLO\source\repos\Lab2-PL2-IEFI\pryTorresIEFIPL2-LAB2\obj\Debug\pryTorresIEFIPL2_LAB2.frmSistema.resources

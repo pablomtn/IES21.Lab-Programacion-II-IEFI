@@ -149,10 +149,10 @@ namespace pryTorresIEFIPL2_LAB2
                 comandoBd.ExecuteNonQuery();
                 MessageBox.Show("Cliente Cargado");
             }
-            catch (Exception mensaje)
+            catch (Exception)
             {
 
-                MessageBox.Show(mensaje.Message);
+                MessageBox.Show("DNI ya registrado, por favor introduzca uno no repetido");
             }
             conexionBd.Close();
 
@@ -456,14 +456,17 @@ namespace pryTorresIEFIPL2_LAB2
             {
                 //Creacion del objeto para la fuente de la letra
                 Font TipoLetra = new Font("Arial", 11);
+                Font TipoLetra2 = new Font("Arial", 13);
                 Font Titulo = new Font("Arial", 20);
                 Font Subtitulo= new Font("Arial", 15);
+                Font Actividad = new Font("Arial", 16);
+            
                 //Nos permite imprimir una cadena de caracteres para el titulo y subtitulos
                 reporte.Graphics.DrawString("Listado Clientes por Actividad", Titulo, Brushes.Black, 250, 100);
                 reporte.Graphics.DrawString("DNI", Subtitulo, Brushes.Black, 100, 200);
-                reporte.Graphics.DrawString("Nombre", Subtitulo, Brushes.Black, 300, 200);
-                reporte.Graphics.DrawString("Apellido", Subtitulo, Brushes.Black, 500, 200);
-                reporte.Graphics.DrawString("Actividad", Subtitulo, Brushes.Black, 700, 200);
+                reporte.Graphics.DrawString("Nombre", Subtitulo, Brushes.Black, 400, 200);
+                reporte.Graphics.DrawString("Apellido", Subtitulo, Brushes.Black, 700, 200);
+                reporte.Graphics.DrawString("Actividad:", Actividad, Brushes.Black, 100, 150);
                
                 //declaracion de variable para el intercalado de cada linea
                 Int32 varEspacioEntreLinea = 225;
@@ -486,18 +489,18 @@ namespace pryTorresIEFIPL2_LAB2
                 string varActividad = "";
                 Int32 varContadorClientes = 0;
                 if (DR.HasRows)
-                {                 
+                {      
                         while (DR.Read())
                         {
                             if (DR.GetInt32(5) == varCodigoActividad)
                             {
                                 varActividad = objClaseActividad.Buscar(DR.GetInt32(5));
-                                varContadorClientes++;
+                                reporte.Graphics.DrawString(varActividad, TipoLetra2, Brushes.Black, 198, 153);
+                                 varContadorClientes++;
                                     //Nos permite imprimir una cadena de caracteres
                                 reporte.Graphics.DrawString(DR.GetInt32(2).ToString(), TipoLetra, Brushes.Black, 100, varEspacioEntreLinea);
-                                reporte.Graphics.DrawString(DR.GetString(0), TipoLetra, Brushes.Black, 300, varEspacioEntreLinea);
-                                reporte.Graphics.DrawString(DR.GetString(1), TipoLetra, Brushes.Black, 500, varEspacioEntreLinea);
-                                reporte.Graphics.DrawString(varActividad, TipoLetra, Brushes.Black, 700, varEspacioEntreLinea);
+                                reporte.Graphics.DrawString(DR.GetString(0), TipoLetra, Brushes.Black, 400, varEspacioEntreLinea);
+                                reporte.Graphics.DrawString(DR.GetString(1), TipoLetra, Brushes.Black, 700, varEspacioEntreLinea);
                                 
                                  varEspacioEntreLinea = varEspacioEntreLinea + 20;
 
@@ -569,14 +572,16 @@ namespace pryTorresIEFIPL2_LAB2
             {
                 //Creacion del objeto para la fuente de la letra
                 Font TipoLetra = new Font("Arial", 11);
+                Font TipoLetra2 = new Font("Arial", 13);
                 Font Titulo = new Font("Arial", 20);
                 Font Subtitulo = new Font("Arial", 15);
+                Font Actividad = new Font("Arial", 16);
                 //Nos permite imprimir una cadena de caracteres para el titulo y subtitulos
                 reporte.Graphics.DrawString("Listado Clientes por Barrios", Titulo, Brushes.Black, 250, 100);
                 reporte.Graphics.DrawString("DNI", Subtitulo, Brushes.Black, 100, 200);
-                reporte.Graphics.DrawString("Nombre", Subtitulo, Brushes.Black, 300, 200);
-                reporte.Graphics.DrawString("Apellido", Subtitulo, Brushes.Black, 500, 200);
-                reporte.Graphics.DrawString("Barrio", Subtitulo, Brushes.Black, 700, 200);
+                reporte.Graphics.DrawString("Nombre", Subtitulo, Brushes.Black, 400, 200);
+                reporte.Graphics.DrawString("Apellido", Subtitulo, Brushes.Black, 700, 200);
+                reporte.Graphics.DrawString("Barrio:", Actividad, Brushes.Black, 100, 150);
                 //declaracion de variable para el intercalado de cada linea
                 Int32 varEspacioEntreLinea = 225;
                 //Recibe la ruta de la BD para conectarse
@@ -604,12 +609,12 @@ namespace pryTorresIEFIPL2_LAB2
                         if (DR.GetInt32(3) == varCodigoBarrio)
                         {
                             varBarrio = objClaseBarrio.Buscar(DR.GetInt32(3));
+                            reporte.Graphics.DrawString(varBarrio, TipoLetra2, Brushes.Black, 198, 153);
                             varContadorClientes++;
                             //Nos permite imprimir una cadena de caracteres
                             reporte.Graphics.DrawString(DR.GetInt32(2).ToString(), TipoLetra, Brushes.Black, 100, varEspacioEntreLinea);
-                            reporte.Graphics.DrawString(DR.GetString(0), TipoLetra, Brushes.Black, 300, varEspacioEntreLinea);
-                            reporte.Graphics.DrawString(DR.GetString(1), TipoLetra, Brushes.Black, 500, varEspacioEntreLinea);
-                            reporte.Graphics.DrawString(varBarrio, TipoLetra, Brushes.Black, 700, varEspacioEntreLinea);
+                            reporte.Graphics.DrawString(DR.GetString(0), TipoLetra, Brushes.Black, 400, varEspacioEntreLinea);
+                            reporte.Graphics.DrawString(DR.GetString(1), TipoLetra, Brushes.Black, 700, varEspacioEntreLinea);
                             varEspacioEntreLinea = varEspacioEntreLinea + 20;
                         }
                     }

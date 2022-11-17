@@ -91,9 +91,19 @@ namespace pryTorresIEFIPL2_LAB2
             btnModificar.Enabled = true;
             btnEliminar.Enabled = true;
             btnGuardar.Enabled = false;
+            DeshabilitarControles();
+
+        }
+        private void DeshabilitarControles()
+        {
+            lstBarrioConsultaCliente.Enabled = false;
+            lstActividadClienteConsulta.Enabled = false;
+            txtSaldoClienteConsulta.ReadOnly = true;
+            txtDireccionConsultaCliente.ReadOnly = true;
 
 
         }
+
         private void HabilitarControles()
         {
 
@@ -122,6 +132,7 @@ namespace pryTorresIEFIPL2_LAB2
             lstActividadClienteConsulta.SelectedIndex = -1;
             lstBarrioConsultaCliente.SelectedIndex = -1;
             txtDireccionConsultaCliente.Text = "";
+            mskDniConsulta.Text = "";
         }
 
         private void lstBarrioConsultaCliente_SelectedIndexChanged(object sender, EventArgs e)
