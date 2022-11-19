@@ -100,6 +100,7 @@ namespace pryTorresIEFIPL2_LAB2
 
         public void ListarClientes(DataGridView dgvClientes)
         {
+            
             try
             {
                 //Recibe la ruta de la BD para conectarse
@@ -146,6 +147,7 @@ namespace pryTorresIEFIPL2_LAB2
                 comandoBd.CommandType = CommandType.Text;
                 comandoBd.CommandText = sql;
                 //ejecuta el comando
+                //Encargado de escribir
                 comandoBd.ExecuteNonQuery();
                 MessageBox.Show("Cliente Cargado");
             }
