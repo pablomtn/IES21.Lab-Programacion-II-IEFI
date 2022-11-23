@@ -16,6 +16,7 @@ namespace pryTorresIEFIPL2_LAB2
 {
     internal class clsCliente
     {
+
         //Creacion de objetos
         //Nos permite conectar a la base de datos
         private OleDbConnection conexionBd = new OleDbConnection();

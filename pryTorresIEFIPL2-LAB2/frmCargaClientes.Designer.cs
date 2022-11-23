@@ -229,6 +229,7 @@
             // 
             this.txtSaldoCliente.Location = new System.Drawing.Point(117, 197);
             this.txtSaldoCliente.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.txtSaldoCliente.MaxLength = 12;
             this.txtSaldoCliente.Name = "txtSaldoCliente";
             this.txtSaldoCliente.Size = new System.Drawing.Size(116, 21);
             this.txtSaldoCliente.TabIndex = 7;
