@@ -65,59 +65,76 @@
             this.columnaSiete,
             this.columnaCinco,
             this.columnaCuatro});
-            this.dgvConsultaClientes.Location = new System.Drawing.Point(6, 22);
+            this.dgvConsultaClientes.Location = new System.Drawing.Point(8, 27);
+            this.dgvConsultaClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvConsultaClientes.Name = "dgvConsultaClientes";
-            this.dgvConsultaClientes.Size = new System.Drawing.Size(742, 150);
+            this.dgvConsultaClientes.RowHeadersWidth = 51;
+            this.dgvConsultaClientes.Size = new System.Drawing.Size(989, 185);
             this.dgvConsultaClientes.TabIndex = 0;
             // 
             // columnaUno
             // 
             this.columnaUno.HeaderText = "DNI";
+            this.columnaUno.MinimumWidth = 6;
             this.columnaUno.Name = "columnaUno";
             this.columnaUno.ReadOnly = true;
+            this.columnaUno.Width = 125;
             // 
             // columnaDos
             // 
             this.columnaDos.HeaderText = "Nombre";
+            this.columnaDos.MinimumWidth = 6;
             this.columnaDos.Name = "columnaDos";
             this.columnaDos.ReadOnly = true;
+            this.columnaDos.Width = 125;
             // 
             // columnaTres
             // 
             this.columnaTres.HeaderText = "Apellido";
+            this.columnaTres.MinimumWidth = 6;
             this.columnaTres.Name = "columnaTres";
             this.columnaTres.ReadOnly = true;
+            this.columnaTres.Width = 125;
             // 
             // columnaSeis
             // 
             this.columnaSeis.HeaderText = "Barrio";
+            this.columnaSeis.MinimumWidth = 6;
             this.columnaSeis.Name = "columnaSeis";
             this.columnaSeis.ReadOnly = true;
+            this.columnaSeis.Width = 125;
             // 
             // columnaSiete
             // 
             this.columnaSiete.HeaderText = "Dirección";
+            this.columnaSiete.MinimumWidth = 6;
             this.columnaSiete.Name = "columnaSiete";
             this.columnaSiete.ReadOnly = true;
+            this.columnaSiete.Width = 125;
             // 
             // columnaCinco
             // 
             this.columnaCinco.HeaderText = "Actividad";
+            this.columnaCinco.MinimumWidth = 6;
             this.columnaCinco.Name = "columnaCinco";
             this.columnaCinco.ReadOnly = true;
+            this.columnaCinco.Width = 125;
             // 
             // columnaCuatro
             // 
             this.columnaCuatro.HeaderText = "Saldo";
+            this.columnaCuatro.MinimumWidth = 6;
             this.columnaCuatro.Name = "columnaCuatro";
             this.columnaCuatro.ReadOnly = true;
+            this.columnaCuatro.Width = 125;
             // 
             // btnListarTotalClientes
             // 
             this.btnListarTotalClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarTotalClientes.Location = new System.Drawing.Point(435, 178);
+            this.btnListarTotalClientes.Location = new System.Drawing.Point(580, 219);
+            this.btnListarTotalClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnListarTotalClientes.Name = "btnListarTotalClientes";
-            this.btnListarTotalClientes.Size = new System.Drawing.Size(313, 23);
+            this.btnListarTotalClientes.Size = new System.Drawing.Size(417, 28);
             this.btnListarTotalClientes.TabIndex = 1;
             this.btnListarTotalClientes.Text = "Listar";
             this.btnListarTotalClientes.UseVisualStyleBackColor = true;
@@ -139,9 +156,11 @@
             this.mrcListarClientes.Controls.Add(this.dgvConsultaClientes);
             this.mrcListarClientes.Controls.Add(this.btnListarTotalClientes);
             this.mrcListarClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mrcListarClientes.Location = new System.Drawing.Point(12, 12);
+            this.mrcListarClientes.Location = new System.Drawing.Point(16, 15);
+            this.mrcListarClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mrcListarClientes.Name = "mrcListarClientes";
-            this.mrcListarClientes.Size = new System.Drawing.Size(761, 302);
+            this.mrcListarClientes.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mrcListarClientes.Size = new System.Drawing.Size(1015, 372);
             this.mrcListarClientes.TabIndex = 3;
             this.mrcListarClientes.TabStop = false;
             this.mrcListarClientes.Text = "Clientes:";
@@ -151,9 +170,10 @@
             // 
             this.lblSaldoMenor.AutoSize = true;
             this.lblSaldoMenor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSaldoMenor.Location = new System.Drawing.Point(6, 242);
+            this.lblSaldoMenor.Location = new System.Drawing.Point(8, 298);
+            this.lblSaldoMenor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSaldoMenor.Name = "lblSaldoMenor";
-            this.lblSaldoMenor.Size = new System.Drawing.Size(87, 16);
+            this.lblSaldoMenor.Size = new System.Drawing.Size(103, 20);
             this.lblSaldoMenor.TabIndex = 6;
             this.lblSaldoMenor.Text = "Saldo Menor:";
             // 
@@ -161,9 +181,10 @@
             // 
             this.lblCantidadClientes.AutoSize = true;
             this.lblCantidadClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidadClientes.Location = new System.Drawing.Point(514, 242);
+            this.lblCantidadClientes.Location = new System.Drawing.Point(685, 298);
+            this.lblCantidadClientes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCantidadClientes.Name = "lblCantidadClientes";
-            this.lblCantidadClientes.Size = new System.Drawing.Size(92, 16);
+            this.lblCantidadClientes.Size = new System.Drawing.Size(109, 20);
             this.lblCantidadClientes.TabIndex = 1;
             this.lblCantidadClientes.Text = "Total Clientes:";
             // 
@@ -171,9 +192,10 @@
             // 
             this.lblTotalSaldos.AutoSize = true;
             this.lblTotalSaldos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalSaldos.Location = new System.Drawing.Point(514, 214);
+            this.lblTotalSaldos.Location = new System.Drawing.Point(685, 263);
+            this.lblTotalSaldos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalSaldos.Name = "lblTotalSaldos";
-            this.lblTotalSaldos.Size = new System.Drawing.Size(87, 16);
+            this.lblTotalSaldos.Size = new System.Drawing.Size(101, 20);
             this.lblTotalSaldos.TabIndex = 0;
             this.lblTotalSaldos.Text = "Total Saldos:";
             // 
@@ -181,9 +203,10 @@
             // 
             this.lblPromedioSaldos.AutoSize = true;
             this.lblPromedioSaldos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPromedioSaldos.Location = new System.Drawing.Point(6, 214);
+            this.lblPromedioSaldos.Location = new System.Drawing.Point(8, 263);
+            this.lblPromedioSaldos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPromedioSaldos.Name = "lblPromedioSaldos";
-            this.lblPromedioSaldos.Size = new System.Drawing.Size(115, 16);
+            this.lblPromedioSaldos.Size = new System.Drawing.Size(133, 20);
             this.lblPromedioSaldos.TabIndex = 2;
             this.lblPromedioSaldos.Text = "Promedio Saldos:";
             // 
@@ -191,54 +214,60 @@
             // 
             this.lblSaldoMayor.AutoSize = true;
             this.lblSaldoMayor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSaldoMayor.Location = new System.Drawing.Point(6, 270);
+            this.lblSaldoMayor.Location = new System.Drawing.Point(8, 332);
+            this.lblSaldoMayor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSaldoMayor.Name = "lblSaldoMayor";
-            this.lblSaldoMayor.Size = new System.Drawing.Size(87, 16);
+            this.lblSaldoMayor.Size = new System.Drawing.Size(101, 20);
             this.lblSaldoMayor.TabIndex = 7;
             this.lblSaldoMayor.Text = "Saldo Mayor:";
             // 
             // txtCantidadClientes
             // 
             this.txtCantidadClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidadClientes.Location = new System.Drawing.Point(631, 237);
+            this.txtCantidadClientes.Location = new System.Drawing.Point(841, 292);
+            this.txtCantidadClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCantidadClientes.Name = "txtCantidadClientes";
             this.txtCantidadClientes.ReadOnly = true;
-            this.txtCantidadClientes.Size = new System.Drawing.Size(115, 21);
+            this.txtCantidadClientes.Size = new System.Drawing.Size(152, 25);
             this.txtCantidadClientes.TabIndex = 4;
             // 
             // txtPromedioSaldos
             // 
             this.txtPromedioSaldos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPromedioSaldos.Location = new System.Drawing.Point(127, 214);
+            this.txtPromedioSaldos.Location = new System.Drawing.Point(169, 263);
+            this.txtPromedioSaldos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPromedioSaldos.Name = "txtPromedioSaldos";
             this.txtPromedioSaldos.ReadOnly = true;
-            this.txtPromedioSaldos.Size = new System.Drawing.Size(115, 21);
+            this.txtPromedioSaldos.Size = new System.Drawing.Size(152, 25);
             this.txtPromedioSaldos.TabIndex = 5;
             // 
             // txtTotalSaldos
             // 
             this.txtTotalSaldos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalSaldos.Location = new System.Drawing.Point(631, 209);
+            this.txtTotalSaldos.Location = new System.Drawing.Point(841, 257);
+            this.txtTotalSaldos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTotalSaldos.Name = "txtTotalSaldos";
             this.txtTotalSaldos.ReadOnly = true;
-            this.txtTotalSaldos.Size = new System.Drawing.Size(115, 21);
+            this.txtTotalSaldos.Size = new System.Drawing.Size(152, 25);
             this.txtTotalSaldos.TabIndex = 3;
             // 
             // txtSaldoMayor
             // 
             this.txtSaldoMayor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSaldoMayor.Location = new System.Drawing.Point(127, 270);
+            this.txtSaldoMayor.Location = new System.Drawing.Point(169, 332);
+            this.txtSaldoMayor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSaldoMayor.Name = "txtSaldoMayor";
             this.txtSaldoMayor.ReadOnly = true;
-            this.txtSaldoMayor.Size = new System.Drawing.Size(115, 21);
+            this.txtSaldoMayor.Size = new System.Drawing.Size(152, 25);
             this.txtSaldoMayor.TabIndex = 9;
             // 
             // btnSalir
             // 
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(6, 178);
+            this.btnSalir.Location = new System.Drawing.Point(8, 219);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(313, 23);
+            this.btnSalir.Size = new System.Drawing.Size(417, 28);
             this.btnSalir.TabIndex = 2;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -247,20 +276,23 @@
             // txtSaldoMenor
             // 
             this.txtSaldoMenor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSaldoMenor.Location = new System.Drawing.Point(127, 242);
+            this.txtSaldoMenor.Location = new System.Drawing.Point(169, 298);
+            this.txtSaldoMenor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSaldoMenor.Name = "txtSaldoMenor";
             this.txtSaldoMenor.ReadOnly = true;
-            this.txtSaldoMenor.Size = new System.Drawing.Size(115, 21);
+            this.txtSaldoMenor.Size = new System.Drawing.Size(152, 25);
             this.txtSaldoMenor.TabIndex = 8;
             // 
             // frmConsultaClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(779, 320);
+            this.ClientSize = new System.Drawing.Size(1039, 394);
             this.Controls.Add(this.mrcListarClientes);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmConsultaClientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta Clientes";
             this.Load += new System.EventHandler(this.frmConsultaClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultaClientes)).EndInit();

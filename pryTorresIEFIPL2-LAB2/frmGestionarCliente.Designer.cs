@@ -63,7 +63,7 @@
             this.txtApellidoClienteConsulta.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtApellidoClienteConsulta.Name = "txtApellidoClienteConsulta";
             this.txtApellidoClienteConsulta.ReadOnly = true;
-            this.txtApellidoClienteConsulta.Size = new System.Drawing.Size(116, 21);
+            this.txtApellidoClienteConsulta.Size = new System.Drawing.Size(116, 25);
             this.txtApellidoClienteConsulta.TabIndex = 1;
             // 
             // txtNombreClienteConsulta
@@ -72,7 +72,7 @@
             this.txtNombreClienteConsulta.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNombreClienteConsulta.Name = "txtNombreClienteConsulta";
             this.txtNombreClienteConsulta.ReadOnly = true;
-            this.txtNombreClienteConsulta.Size = new System.Drawing.Size(116, 21);
+            this.txtNombreClienteConsulta.Size = new System.Drawing.Size(116, 25);
             this.txtNombreClienteConsulta.TabIndex = 2;
             // 
             // lblDniClienteBusqueda
@@ -81,7 +81,7 @@
             this.lblDniClienteBusqueda.Location = new System.Drawing.Point(37, 30);
             this.lblDniClienteBusqueda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDniClienteBusqueda.Name = "lblDniClienteBusqueda";
-            this.lblDniClienteBusqueda.Size = new System.Drawing.Size(33, 16);
+            this.lblDniClienteBusqueda.Size = new System.Drawing.Size(41, 20);
             this.lblDniClienteBusqueda.TabIndex = 3;
             this.lblDniClienteBusqueda.Text = "DNI:";
             // 
@@ -91,7 +91,7 @@
             this.mskDniClienteBusqueda.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.mskDniClienteBusqueda.Mask = "99999999";
             this.mskDniClienteBusqueda.Name = "mskDniClienteBusqueda";
-            this.mskDniClienteBusqueda.Size = new System.Drawing.Size(116, 21);
+            this.mskDniClienteBusqueda.Size = new System.Drawing.Size(116, 25);
             this.mskDniClienteBusqueda.TabIndex = 1;
             this.mskDniClienteBusqueda.TextChanged += new System.EventHandler(this.mskDniClienteBusqueda_TextChanged);
             // 
@@ -140,7 +140,7 @@
             this.txtDniClienteBusqueda.Location = new System.Drawing.Point(100, 30);
             this.txtDniClienteBusqueda.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtDniClienteBusqueda.Name = "txtDniClienteBusqueda";
-            this.txtDniClienteBusqueda.Size = new System.Drawing.Size(116, 21);
+            this.txtDniClienteBusqueda.Size = new System.Drawing.Size(116, 25);
             this.txtDniClienteBusqueda.TabIndex = 0;
             // 
             // mrcDatosClientes
@@ -176,7 +176,7 @@
             this.mskDniConsulta.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.mskDniConsulta.Mask = "99999999";
             this.mskDniConsulta.Name = "mskDniConsulta";
-            this.mskDniConsulta.Size = new System.Drawing.Size(116, 21);
+            this.mskDniConsulta.Size = new System.Drawing.Size(116, 25);
             this.mskDniConsulta.TabIndex = 11;
             // 
             // lstActividadClienteConsulta
@@ -186,7 +186,7 @@
             this.lstActividadClienteConsulta.FormattingEnabled = true;
             this.lstActividadClienteConsulta.Location = new System.Drawing.Point(120, 183);
             this.lstActividadClienteConsulta.Name = "lstActividadClienteConsulta";
-            this.lstActividadClienteConsulta.Size = new System.Drawing.Size(116, 23);
+            this.lstActividadClienteConsulta.Size = new System.Drawing.Size(116, 26);
             this.lstActividadClienteConsulta.TabIndex = 18;
             // 
             // lstBarrioConsultaCliente
@@ -196,7 +196,7 @@
             this.lstBarrioConsultaCliente.FormattingEnabled = true;
             this.lstBarrioConsultaCliente.Location = new System.Drawing.Point(120, 123);
             this.lstBarrioConsultaCliente.Name = "lstBarrioConsultaCliente";
-            this.lstBarrioConsultaCliente.Size = new System.Drawing.Size(116, 23);
+            this.lstBarrioConsultaCliente.Size = new System.Drawing.Size(116, 26);
             this.lstBarrioConsultaCliente.TabIndex = 10;
             this.lstBarrioConsultaCliente.SelectedIndexChanged += new System.EventHandler(this.lstBarrioConsultaCliente_SelectedIndexChanged);
             // 
@@ -206,7 +206,7 @@
             this.txtDireccionConsultaCliente.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtDireccionConsultaCliente.Name = "txtDireccionConsultaCliente";
             this.txtDireccionConsultaCliente.ReadOnly = true;
-            this.txtDireccionConsultaCliente.Size = new System.Drawing.Size(116, 21);
+            this.txtDireccionConsultaCliente.Size = new System.Drawing.Size(116, 25);
             this.txtDireccionConsultaCliente.TabIndex = 17;
             this.txtDireccionConsultaCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDireccionConsultaCliente_KeyPress);
             // 
@@ -216,7 +216,7 @@
             this.lblDireccionClienteConsulta.Location = new System.Drawing.Point(37, 153);
             this.lblDireccionClienteConsulta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDireccionClienteConsulta.Name = "lblDireccionClienteConsulta";
-            this.lblDireccionClienteConsulta.Size = new System.Drawing.Size(67, 16);
+            this.lblDireccionClienteConsulta.Size = new System.Drawing.Size(79, 20);
             this.lblDireccionClienteConsulta.TabIndex = 16;
             this.lblDireccionClienteConsulta.Text = "Dirección:";
             // 
@@ -226,7 +226,7 @@
             this.lblDni.Location = new System.Drawing.Point(37, 92);
             this.lblDni.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDni.Name = "lblDni";
-            this.lblDni.Size = new System.Drawing.Size(30, 16);
+            this.lblDni.Size = new System.Drawing.Size(37, 20);
             this.lblDni.TabIndex = 15;
             this.lblDni.Text = "DNI";
             // 
@@ -236,7 +236,7 @@
             this.lblActividad.Location = new System.Drawing.Point(37, 183);
             this.lblActividad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblActividad.Name = "lblActividad";
-            this.lblActividad.Size = new System.Drawing.Size(66, 16);
+            this.lblActividad.Size = new System.Drawing.Size(77, 20);
             this.lblActividad.TabIndex = 12;
             this.lblActividad.Text = "Actividad:";
             // 
@@ -246,7 +246,7 @@
             this.lblSaldoClienteConsulta.Location = new System.Drawing.Point(37, 214);
             this.lblSaldoClienteConsulta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSaldoClienteConsulta.Name = "lblSaldoClienteConsulta";
-            this.lblSaldoClienteConsulta.Size = new System.Drawing.Size(46, 16);
+            this.lblSaldoClienteConsulta.Size = new System.Drawing.Size(54, 20);
             this.lblSaldoClienteConsulta.TabIndex = 8;
             this.lblSaldoClienteConsulta.Text = "Saldo:";
             // 
@@ -256,7 +256,7 @@
             this.lblBarrio.Location = new System.Drawing.Point(37, 123);
             this.lblBarrio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBarrio.Name = "lblBarrio";
-            this.lblBarrio.Size = new System.Drawing.Size(46, 16);
+            this.lblBarrio.Size = new System.Drawing.Size(55, 20);
             this.lblBarrio.TabIndex = 10;
             this.lblBarrio.Text = "Barrio:";
             // 
@@ -266,7 +266,7 @@
             this.txtSaldoClienteConsulta.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtSaldoClienteConsulta.Name = "txtSaldoClienteConsulta";
             this.txtSaldoClienteConsulta.ReadOnly = true;
-            this.txtSaldoClienteConsulta.Size = new System.Drawing.Size(116, 21);
+            this.txtSaldoClienteConsulta.Size = new System.Drawing.Size(116, 25);
             this.txtSaldoClienteConsulta.TabIndex = 9;
             this.txtSaldoClienteConsulta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSaldoClienteConsulta_KeyPress);
             // 
@@ -276,7 +276,7 @@
             this.lblApellidoCliente.Location = new System.Drawing.Point(36, 61);
             this.lblApellidoCliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblApellidoCliente.Name = "lblApellidoCliente";
-            this.lblApellidoCliente.Size = new System.Drawing.Size(60, 16);
+            this.lblApellidoCliente.Size = new System.Drawing.Size(69, 20);
             this.lblApellidoCliente.TabIndex = 7;
             this.lblApellidoCliente.Text = "Apellido:";
             // 
@@ -286,7 +286,7 @@
             this.lblNombreClienteConsulta.Location = new System.Drawing.Point(37, 30);
             this.lblNombreClienteConsulta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreClienteConsulta.Name = "lblNombreClienteConsulta";
-            this.lblNombreClienteConsulta.Size = new System.Drawing.Size(59, 16);
+            this.lblNombreClienteConsulta.Size = new System.Drawing.Size(69, 20);
             this.lblNombreClienteConsulta.TabIndex = 7;
             this.lblNombreClienteConsulta.Text = "Nombre:";
             // 
@@ -331,7 +331,7 @@
             // 
             // frmGestionarCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(291, 408);
             this.Controls.Add(this.btnGuardar);
@@ -343,6 +343,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmGestionarCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión Clientes";
             this.Load += new System.EventHandler(this.frmConsultaClientes_Load);
             this.mrcBusquedaCliente.ResumeLayout(false);

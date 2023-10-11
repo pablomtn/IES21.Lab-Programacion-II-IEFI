@@ -44,9 +44,10 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(152, 12);
+            this.lblNombre.Location = new System.Drawing.Point(203, 15);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(87, 25);
+            this.lblNombre.Size = new System.Drawing.Size(110, 29);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre:";
             // 
@@ -55,9 +56,10 @@
             this.lblNombreSistema.AutoSize = true;
             this.lblNombreSistema.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblNombreSistema.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreSistema.Location = new System.Drawing.Point(266, 12);
+            this.lblNombreSistema.Location = new System.Drawing.Point(355, 15);
+            this.lblNombreSistema.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreSistema.Name = "lblNombreSistema";
-            this.lblNombreSistema.Size = new System.Drawing.Size(232, 27);
+            this.lblNombreSistema.Size = new System.Drawing.Size(297, 31);
             this.lblNombreSistema.TabIndex = 1;
             this.lblNombreSistema.Text = "Pablo Martin Torres Nara";
             // 
@@ -65,9 +67,10 @@
             // 
             this.lblCorreo.AutoSize = true;
             this.lblCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorreo.Location = new System.Drawing.Point(152, 62);
+            this.lblCorreo.Location = new System.Drawing.Point(203, 76);
+            this.lblCorreo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(97, 25);
+            this.lblCorreo.Size = new System.Drawing.Size(121, 29);
             this.lblCorreo.TabIndex = 2;
             this.lblCorreo.Text = "Contacto:";
             // 
@@ -76,18 +79,20 @@
             this.lblCorreoSistema.AutoSize = true;
             this.lblCorreoSistema.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblCorreoSistema.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorreoSistema.Location = new System.Drawing.Point(266, 62);
+            this.lblCorreoSistema.Location = new System.Drawing.Point(355, 76);
+            this.lblCorreoSistema.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCorreoSistema.Name = "lblCorreoSistema";
-            this.lblCorreoSistema.Size = new System.Drawing.Size(236, 27);
+            this.lblCorreoSistema.Size = new System.Drawing.Size(304, 31);
             this.lblCorreoSistema.TabIndex = 3;
             this.lblCorreoSistema.Text = "pablo564903@gmail.com";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(134, 125);
+            this.pictureBox1.Size = new System.Drawing.Size(179, 154);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -96,9 +101,10 @@
             // 
             this.lblNumero.AutoSize = true;
             this.lblNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumero.Location = new System.Drawing.Point(152, 112);
+            this.lblNumero.Location = new System.Drawing.Point(203, 138);
+            this.lblNumero.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNumero.Name = "lblNumero";
-            this.lblNumero.Size = new System.Drawing.Size(183, 25);
+            this.lblNumero.Size = new System.Drawing.Size(234, 29);
             this.lblNumero.TabIndex = 5;
             this.lblNumero.Text = "Numero Telefónico:";
             // 
@@ -107,19 +113,20 @@
             this.lblNumeroContacto.AutoSize = true;
             this.lblNumeroContacto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblNumeroContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumeroContacto.Location = new System.Drawing.Point(374, 112);
+            this.lblNumeroContacto.Location = new System.Drawing.Point(499, 138);
+            this.lblNumeroContacto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNumeroContacto.Name = "lblNumeroContacto";
-            this.lblNumeroContacto.Size = new System.Drawing.Size(124, 27);
+            this.lblNumeroContacto.Size = new System.Drawing.Size(2, 31);
             this.lblNumeroContacto.TabIndex = 6;
-            this.lblNumeroContacto.Text = "2966222491";
             this.lblNumeroContacto.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnVolves
             // 
             this.btnVolves.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolves.Location = new System.Drawing.Point(408, 169);
+            this.btnVolves.Location = new System.Drawing.Point(544, 208);
+            this.btnVolves.Margin = new System.Windows.Forms.Padding(4);
             this.btnVolves.Name = "btnVolves";
-            this.btnVolves.Size = new System.Drawing.Size(94, 25);
+            this.btnVolves.Size = new System.Drawing.Size(125, 31);
             this.btnVolves.TabIndex = 7;
             this.btnVolves.Text = "Volver";
             this.btnVolves.UseVisualStyleBackColor = true;
@@ -127,9 +134,9 @@
             // 
             // frmSistema
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(524, 206);
+            this.ClientSize = new System.Drawing.Size(699, 254);
             this.Controls.Add(this.btnVolves);
             this.Controls.Add(this.lblNumeroContacto);
             this.Controls.Add(this.lblNumero);
@@ -139,7 +146,9 @@
             this.Controls.Add(this.lblNombreSistema);
             this.Controls.Add(this.lblNombre);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmSistema";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -56,7 +56,7 @@
             this.txtNombreCliente.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.txtNombreCliente.MaxLength = 20;
             this.txtNombreCliente.Name = "txtNombreCliente";
-            this.txtNombreCliente.Size = new System.Drawing.Size(116, 21);
+            this.txtNombreCliente.Size = new System.Drawing.Size(116, 25);
             this.txtNombreCliente.TabIndex = 1;
             this.txtNombreCliente.TextChanged += new System.EventHandler(this.txtNombreCliente_TextChanged);
             this.txtNombreCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreCliente_KeyPress);
@@ -68,7 +68,7 @@
             this.txtApellidoCliente.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.txtApellidoCliente.MaxLength = 20;
             this.txtApellidoCliente.Name = "txtApellidoCliente";
-            this.txtApellidoCliente.Size = new System.Drawing.Size(116, 21);
+            this.txtApellidoCliente.Size = new System.Drawing.Size(116, 25);
             this.txtApellidoCliente.TabIndex = 2;
             this.txtApellidoCliente.TextChanged += new System.EventHandler(this.txtApellidoCliente_TextChanged);
             this.txtApellidoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidoCliente_KeyPress);
@@ -93,7 +93,7 @@
             this.lblNombreCliente.Location = new System.Drawing.Point(7, 31);
             this.lblNombreCliente.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblNombreCliente.Name = "lblNombreCliente";
-            this.lblNombreCliente.Size = new System.Drawing.Size(59, 16);
+            this.lblNombreCliente.Size = new System.Drawing.Size(69, 20);
             this.lblNombreCliente.TabIndex = 4;
             this.lblNombreCliente.Text = "Nombre:";
             // 
@@ -104,7 +104,7 @@
             this.lblApellidoNombre.Location = new System.Drawing.Point(7, 58);
             this.lblApellidoNombre.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblApellidoNombre.Name = "lblApellidoNombre";
-            this.lblApellidoNombre.Size = new System.Drawing.Size(60, 16);
+            this.lblApellidoNombre.Size = new System.Drawing.Size(69, 20);
             this.lblApellidoNombre.TabIndex = 5;
             this.lblApellidoNombre.Text = "Apellido:";
             // 
@@ -115,7 +115,7 @@
             this.lblDniCliente.Location = new System.Drawing.Point(7, 85);
             this.lblDniCliente.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblDniCliente.Name = "lblDniCliente";
-            this.lblDniCliente.Size = new System.Drawing.Size(33, 16);
+            this.lblDniCliente.Size = new System.Drawing.Size(41, 20);
             this.lblDniCliente.TabIndex = 6;
             this.lblDniCliente.Text = "DNI:";
             // 
@@ -126,7 +126,7 @@
             this.lblActividadCliente.Location = new System.Drawing.Point(7, 168);
             this.lblActividadCliente.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblActividadCliente.Name = "lblActividadCliente";
-            this.lblActividadCliente.Size = new System.Drawing.Size(63, 16);
+            this.lblActividadCliente.Size = new System.Drawing.Size(73, 20);
             this.lblActividadCliente.TabIndex = 7;
             this.lblActividadCliente.Text = "Actividad";
             // 
@@ -138,7 +138,7 @@
             this.lstActividadCliente.Location = new System.Drawing.Point(117, 168);
             this.lstActividadCliente.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.lstActividadCliente.Name = "lstActividadCliente";
-            this.lstActividadCliente.Size = new System.Drawing.Size(116, 23);
+            this.lstActividadCliente.Size = new System.Drawing.Size(116, 26);
             this.lstActividadCliente.TabIndex = 6;
             this.lstActividadCliente.SelectedIndexChanged += new System.EventHandler(this.lstActividadCliente_SelectedIndexChanged);
             // 
@@ -149,7 +149,7 @@
             this.lblBarrioCliente.Location = new System.Drawing.Point(7, 112);
             this.lblBarrioCliente.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblBarrioCliente.Name = "lblBarrioCliente";
-            this.lblBarrioCliente.Size = new System.Drawing.Size(46, 16);
+            this.lblBarrioCliente.Size = new System.Drawing.Size(55, 20);
             this.lblBarrioCliente.TabIndex = 11;
             this.lblBarrioCliente.Text = "Barrio:";
             // 
@@ -161,7 +161,7 @@
             this.lstBarrioCliente.Location = new System.Drawing.Point(117, 112);
             this.lstBarrioCliente.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.lstBarrioCliente.Name = "lstBarrioCliente";
-            this.lstBarrioCliente.Size = new System.Drawing.Size(116, 23);
+            this.lstBarrioCliente.Size = new System.Drawing.Size(116, 26);
             this.lstBarrioCliente.TabIndex = 4;
             this.lstBarrioCliente.SelectedIndexChanged += new System.EventHandler(this.lstBarrioCliente_SelectedIndexChanged);
             // 
@@ -198,7 +198,7 @@
             this.txtDireccionCliente.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.txtDireccionCliente.MaxLength = 20;
             this.txtDireccionCliente.Name = "txtDireccionCliente";
-            this.txtDireccionCliente.Size = new System.Drawing.Size(116, 21);
+            this.txtDireccionCliente.Size = new System.Drawing.Size(116, 25);
             this.txtDireccionCliente.TabIndex = 5;
             this.txtDireccionCliente.TextChanged += new System.EventHandler(this.txtDireccionCliente_TextChanged);
             this.txtDireccionCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDireccionCliente_KeyPress);
@@ -210,7 +210,7 @@
             this.lblDireccionCliente.Location = new System.Drawing.Point(7, 141);
             this.lblDireccionCliente.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblDireccionCliente.Name = "lblDireccionCliente";
-            this.lblDireccionCliente.Size = new System.Drawing.Size(67, 16);
+            this.lblDireccionCliente.Size = new System.Drawing.Size(79, 20);
             this.lblDireccionCliente.TabIndex = 17;
             this.lblDireccionCliente.Text = "Dirección:";
             // 
@@ -221,7 +221,7 @@
             this.lblSaldoCliente.Location = new System.Drawing.Point(7, 197);
             this.lblSaldoCliente.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblSaldoCliente.Name = "lblSaldoCliente";
-            this.lblSaldoCliente.Size = new System.Drawing.Size(46, 16);
+            this.lblSaldoCliente.Size = new System.Drawing.Size(54, 20);
             this.lblSaldoCliente.TabIndex = 15;
             this.lblSaldoCliente.Text = "Saldo:";
             // 
@@ -231,7 +231,7 @@
             this.txtSaldoCliente.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.txtSaldoCliente.MaxLength = 12;
             this.txtSaldoCliente.Name = "txtSaldoCliente";
-            this.txtSaldoCliente.Size = new System.Drawing.Size(116, 21);
+            this.txtSaldoCliente.Size = new System.Drawing.Size(116, 25);
             this.txtSaldoCliente.TabIndex = 7;
             this.txtSaldoCliente.TextChanged += new System.EventHandler(this.txtSaldoCliente_TextChanged);
             this.txtSaldoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSaldoCliente_KeyPress);
@@ -242,7 +242,7 @@
             this.mskDniCliente.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.mskDniCliente.Mask = "99999999";
             this.mskDniCliente.Name = "mskDniCliente";
-            this.mskDniCliente.Size = new System.Drawing.Size(116, 21);
+            this.mskDniCliente.Size = new System.Drawing.Size(116, 25);
             this.mskDniCliente.TabIndex = 3;
             this.mskDniCliente.TextChanged += new System.EventHandler(this.mskDniCliente_TextChanged);
             // 
@@ -260,7 +260,7 @@
             // 
             // frmCargaClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(263, 292);
@@ -271,6 +271,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.Name = "frmCargaClientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Carga Clientes";
             this.Load += new System.EventHandler(this.frmCargaClientes_Load);
             this.mrcCargaClientes.ResumeLayout(false);
